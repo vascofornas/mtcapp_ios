@@ -1,0 +1,31 @@
+<!--
+  Generated template for the Actividades page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div *ngIf="actividades!==null">
+    <ion-list>
+      <ion-item *ngFor="let actividad of actividades">
+        <div item-left>{{ actividad.fecha_inicio }}</div>
+        <ion-thumbnail>
+          <img src="{{ urlBase + actividad.imagen }}">
+        </ion-thumbnail>
+        <h2 item-right>{{ actividad.titulo }}</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="actividades===null">
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+</ion-content>

@@ -60,6 +60,15 @@ page-home ion-content {
   left: 247px;
 }
 
+@media screen and (-webkit-device-pixel-ratio: 1.5) {
+  /* CSS for high-density screens */
+
+}
+
+@media screen and (-webkit-device-pixel-ratio: 0.75) {
+
+}
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
   /* iPhone 6 landscape */
 }
