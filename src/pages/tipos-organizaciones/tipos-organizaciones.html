@@ -7,12 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>TiposOrganizaciones</ion-title>
+    <ion-title></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <div *ngIf="tipos_organizaciones !== null">
+    <ion-list>
+      <ion-item *ngFor="let tipo_organizacion of tipos_organizaciones" (click)="cargarOrganizaciones(tipo_organizacion.url_api)">
+        <ion-thumbnail item-left *ngIf="tipo_organizacion.imagen">
+          <img src="{{ urlBase + tipo_organizacion.imagen }}">
+        </ion-thumbnail>
+        <h2>{{ tipo_organizacion.nombre }}</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="tipos_organizaciones === null">
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
 </ion-content>

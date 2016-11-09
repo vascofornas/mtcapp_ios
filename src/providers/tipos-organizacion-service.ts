@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import { ENV } from '../config/environment';
+
+
 /*
   Generated class for the TiposOrganizacionService provider.
 
@@ -12,7 +15,23 @@ import 'rxjs/add/operator/map';
 export class TiposOrganizacionService {
 
   constructor(public http: Http) {
-    console.log('Hello TiposOrganizacionService Provider');
+
+  }
+
+  load(url){
+
+    return new Promise(resolve => {
+
+      var path = ENV.API_URL+url;
+      console.log(path);
+
+      this.http.get(path)
+        .map(res => res.json())
+        .subscribe( (data : any) => {
+
+          resolve(data.tipos_organizacion);
+        });
+    });
   }
 
 }

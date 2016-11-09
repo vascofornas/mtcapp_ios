@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { TiposOrganizacionService } from '../../providers/tipos-organizacion-service';
 
+import { OrganizacionesPorUbicacionPage } from '../organizaciones-por-ubicacion/organizaciones-por-ubicacion';
+
 import { ENV } from '../../config/environment';
 
 /*
@@ -22,7 +24,11 @@ export class TiposOrganizacionesPage {
 
   public urlBase : string = ENV.API_URL;
 
-  constructor(public navCtrl: NavController, public params: NavParams, public service: TiposOrganizacionService) {
+  constructor(
+    public navCtrl: NavController,
+    public params: NavParams,
+    public tiposOrganizacionService: TiposOrganizacionService
+  ) {
     this.cargarTiposOrganizaciones(params.get("url"));
   }
 
@@ -31,7 +37,16 @@ export class TiposOrganizacionesPage {
   }
 
   cargarTiposOrganizaciones(url){
+    console.log(url);
 
+    this.tiposOrganizacionService.load(url).then(data => {
+      //console.log(data);
+      this.tipos_organizaciones = data;
+    });
+  }
+
+  cargarOrganizaciones(url){
+    this.navCtrl.push(OrganizacionesPorUbicacionPage, {url: url});
   }
 
 }

@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 
 import { QueHacerPage } from '../que-hacer/que-hacer';
 import { TiposUbicacionesPage } from '../tipos-ubicaciones/tipos-ubicaciones';
+import { TiposOrganizacionesPage } from '../tipos-organizaciones/tipos-organizaciones';
+import { ConsultanosPage } from '../consultanos/consultanos';
 
 @Component({
   selector: 'page-home',
@@ -25,19 +27,19 @@ export class HomePage {
   };
 
   queNecesito = () => {
-    this.navCtrl.push(QueHacerPage);
+    this.navCtrl.push(TiposOrganizacionesPage, {url: '/api/que-necesito/index'});
   };
 
   consultanos = () => {
-    this.navCtrl.push(QueHacerPage);
+    this.navCtrl.push(ConsultanosPage);
   };
 
   valesDescuento = () => {
-    this.navCtrl.push(QueHacerPage);
+
   };
 
   zonasWifi = () => {
-    this.navCtrl.push(QueHacerPage);
+
   };
 
 }

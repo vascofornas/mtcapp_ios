@@ -9,6 +9,7 @@ import { QueHacerCalendarioPage } from '../pages/que-hacer-calendario/que-hacer-
 import { TiposUbicacionesPage } from '../pages/tipos-ubicaciones/tipos-ubicaciones';
 import { OrganizacionesPage } from '../pages/organizaciones/organizaciones';
 import { TiposOrganizacionesPage } from '../pages/tipos-organizaciones/tipos-organizaciones';
+import { OrganizacionesPorUbicacionPage } from '../pages/organizaciones-por-ubicacion/organizaciones-por-ubicacion';
 import { ConsultanosPage } from '../pages/consultanos/consultanos';
 
 import { ION_CALENDAR_DIRECTIVES, IonCalendar } from '@ionic2-extra/calendar';
@@ -24,6 +25,7 @@ import { ION_CALENDAR_DIRECTIVES, IonCalendar } from '@ionic2-extra/calendar';
     TiposUbicacionesPage,
     OrganizacionesPage,
     TiposOrganizacionesPage,
+    OrganizacionesPorUbicacionPage,
     ConsultanosPage,
     ION_CALENDAR_DIRECTIVES,
     IonCalendar
@@ -41,6 +43,7 @@ import { ION_CALENDAR_DIRECTIVES, IonCalendar } from '@ionic2-extra/calendar';
     QueHacerCalendarioPage,
     TiposUbicacionesPage,
     OrganizacionesPage,
+    OrganizacionesPorUbicacionPage,
     TiposOrganizacionesPage,
     ConsultanosPage,
   ],
