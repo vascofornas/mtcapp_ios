@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-import { QueHacerPage } from '../../pages/que-hacer/que-hacer';
+import { QueHacerPage } from '../que-hacer/que-hacer';
+import { TiposUbicacionesPage } from '../tipos-ubicaciones/tipos-ubicaciones';
 
 @Component({
   selector: 'page-home',
@@ -20,7 +21,7 @@ export class HomePage {
   };
 
   dondeEsta = () => {
-    this.navCtrl.push(QueHacerPage);
+    this.navCtrl.push(TiposUbicacionesPage, {url: '/api/donde-esta/categoria/0'});
   };
 
   queNecesito = () => {

@@ -9,13 +9,13 @@
       <ion-item>
         <h1>¿Por Concejalias?</h1>
         <div *ngFor="let concejalia of categorias.concejalias">
-          <a href="#" (click)="verActividades(concejalia.url)">{{concejalia.nombre}}</a>
+          <a href="#" (click)="verActividades(concejalia.url_api)">{{concejalia.nombre}}</a>
         </div>
       </ion-item>
       <ion-item>
         <h2>¿Por actividades?</h2>
         <div *ngFor="let tipoActividad of categorias.tipos_actividad">
-          <a href="#" (click)="verActividades(tipoActividad.url)">{{tipoActividad.nombre}}</a>
+          <a href="#" (click)="verActividades(tipoActividad.url_api)">{{tipoActividad.nombre}}</a>
         </div>
       </ion-item>
     </ion-list>
