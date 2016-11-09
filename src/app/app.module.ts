@@ -12,7 +12,7 @@ import { TiposOrganizacionesPage } from '../pages/tipos-organizaciones/tipos-org
 import { OrganizacionesPorUbicacionPage } from '../pages/organizaciones-por-ubicacion/organizaciones-por-ubicacion';
 import { ConsultanosPage } from '../pages/consultanos/consultanos';
 
-import { ION_CALENDAR_DIRECTIVES, IonCalendar } from '@ionic2-extra/calendar';
+import { IonCalendarModule } from '@ionic2-extra/calendar';
 
 @NgModule({
   declarations: [
@@ -26,12 +26,11 @@ import { ION_CALENDAR_DIRECTIVES, IonCalendar } from '@ionic2-extra/calendar';
     OrganizacionesPage,
     TiposOrganizacionesPage,
     OrganizacionesPorUbicacionPage,
-    ConsultanosPage,
-    ION_CALENDAR_DIRECTIVES,
-    IonCalendar
+    ConsultanosPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonCalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +44,7 @@ import { ION_CALENDAR_DIRECTIVES, IonCalendar } from '@ionic2-extra/calendar';
     OrganizacionesPage,
     OrganizacionesPorUbicacionPage,
     TiposOrganizacionesPage,
-    ConsultanosPage,
+    ConsultanosPage
   ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

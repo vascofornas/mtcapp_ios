@@ -2,62 +2,60 @@ page-home {
 
 }
 page-home ion-content {
-  background: url('/assets/img/bg-home.png') center top no-repeat;
-  background-size: 370px 668px;
-  width: 370px;
-  margin: 0 auto;
+  background: url('../assets/img/bg-home.png') center top no-repeat;
+  background-size: 100%;
 }
 .home-btn{
   display: block;
   position: absolute;
 }
 .que-hacer-btn{
-  background: url('/assets/img/1_1080x1920.png') center top no-repeat;
-  background-size: 98px 98px;
-  width: 98px;
-  height: 98px;
-  top: 46px;
-  right: 1px;
+  background: url('../assets/img/1_1080x1920.png') center top no-repeat;
+  background-size: 100%;
+  width: 26.5%;
+  height: 7em;
+  top: 6.9%;
+  right: 4%;
 }
 .donde-esta-btn {
-  background: url('/assets/img/2_1080x1920.png') center top no-repeat;
-  background-size: 98px 98px;
-  width: 98px;
-  height: 98px;
-  top: 99px;
-  left: 143px;
+  background: url('../assets/img/2_1080x1920.png') center top no-repeat;
+  background-size: 7em;
+  width: 7em;
+  height: 7em;
+  top: 7em;
+  left: 10.2em;
 }
 .que-necesito-btn {
-  background: url('/assets/img/3_1080x1920.png') center top no-repeat;
-  background-size: 98px 98px;
-  width: 98px;
-  height: 98px;
-  top: 186px;
-  left: 48px;
+  background: url('../assets/img/3_1080x1920.png') center top no-repeat;
+  background-size: 7em;
+  width: 7em;
+  height: 7em;
+  top: 13em;
+  left: 3.4em;
 }
 .consultanos-btn {
-  background: url('/assets/img/4_1080x1920.png') center top no-repeat;
-  background-size: 98px 98px;
-  width: 98px;
-  height: 98px;
-  top: 304px;
-  left: 13px;
+  background: url('../assets/img/4_1080x1920.png') center top no-repeat;
+  background-size: 7em;
+  width: 7em;
+  height: 7em;
+  top: 21.4em;
+  left: 1em;
 }
 .vales-descuento-btn {
-  background: url('/assets/img/5_1080x1920.png') center top no-repeat;
-  background-size: 98px 98px;
-  width: 98px;
-  height: 98px;
-  top: 431px;
-  left: 21px;
+  background: url('../assets/img/5_1080x1920.png') center top no-repeat;
+  background-size: 7em;
+  width: 7em;
+  height: 7em;
+  top: 30.3em;
+  left: 1.5em;
 }
 .zonas-wifi-btn {
-  background: url('/assets/img/Boton_wifi.png') center top no-repeat;
-  background-size: 78px 101px;
-  width: 81px;
-  height: 101px;
-  top: 411px;
-  left: 270px;
+  background: url('../assets/img/Boton_wifi.png') center top no-repeat;
+  background-size: 4.9em;
+  width: 4.9em;
+  height: 7.1em;
+  top: 29em;
+  left: 20em;
 }
 
 @media screen and (-webkit-device-pixel-ratio: 1.5) {
