@@ -19,10 +19,30 @@ export class QueHacerCalendarioPage {
 
   constructor(public navCtrl: NavController) {}
 
+  get seleccionarPeriodo(){
+    return this.periodoSeleccionado;
+  }
+
+  set seleccionarPeriodo(value){
+    this.periodoSeleccionado = value;
+    console.log(value);
+    let dateObj = value.startDate;
+    let month = dateObj.getUTCMonth() + 1;
+    let day = dateObj.getUTCDate();
+    let year = dateObj.getUTCFullYear();
+    let busqueda = year + "-" + month + "-" + day;
+
+    let _url = '/api/que-hacer/agenda/'+busqueda;
+
+    this.navCtrl.push(ActividadesPage, {url: _url});
+    
+  }
+
   ionViewDidLoad() {
     //console.log('Hello QueHacerCalendarioPage Page');
   }
 
+  /*
   onChange(evt){
     let dateObj = evt.startDate;
     let month = dateObj.getUTCMonth() + 1;
@@ -33,7 +53,7 @@ export class QueHacerCalendarioPage {
     let _url = '/api/que-hacer/agenda/'+busqueda;
 
     this.navCtrl.push(ActividadesPage, {url: _url});
-  }
+  }*/
 
 
 }

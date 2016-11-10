@@ -14,7 +14,7 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
+body { overflow: auto; }
 ion-spinner {
   text-align: center;
   margin: 0 auto;
@@ -23,12 +23,85 @@ ion-spinner {
 .scroll-content {
   overflow-y: hidden;
 }
-.platform-core ion-content {
-  width: 370px;
-  height: 659px;
+.content-md {
+	background-color: #003333;
+}
+.platform-core .ion-page {
+	  /*
+  width: 320px;
+  height: 568px;
+  */
+	/*
+	width: 414px;
+	height: 736px;
+	*/
+	  /*  
+	width: 414px;
+	height: 736px;
+  */
+
+  
+	width: 360px;
+	height: 640px;
+  
+}
+.app-container {
+  position: relative;
+  margin: 0 auto;
+	width: 320px;
+	height: 568px;
+
 }
 
 ion-content, .scroll-content {
   padding: 0 !important;
   margin: 0 auto;
+}
+.toolbar-background {
+	background: url('../assets/img/header1.png') center center no-repeat;
+	background-size: 320px;
+	background-color: #166853;
+	border: 0 none;
+}
+.toolbar-background button {
+	color: #fff;
+}
+
+.top-app {
+	width: 320px;
+	margin: 0 auto;
+	height: 20px;
+	background-color: #003837;
+}
+.bottom-app {
+	background: url('../assets/img/tira_base.png') center center no-repeat;
+	background-size: 320px;
+    width: 320px;
+    height: 46px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+}
+.list-md ion-item:nth-child(even){
+	background-color: #B4E8D3;
+}
+
+.list-md ion-item {
+	padding-left: 0;
+}
+.list-md .item-block .item-inner {
+	border-bottom: 0 none;
+}
+.list-md > .item-block {
+	border-bottom: 1px solid #dedede;
+}
+.app-container .list-md ion-thumbnail {
+	margin: 0;
+}
+.item-md ion-thumbnail img {
+	max-width: 11rem;
+	max-height: 12rem;
+}
+.with-padding {
+	padding-left: 12px;
 }

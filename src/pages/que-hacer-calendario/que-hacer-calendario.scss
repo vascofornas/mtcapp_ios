@@ -1,31 +1,19 @@
-page-que-hacer-calendario {
-
-}
-page-que-hacer-calendario ion-content {
-  width: 370px;
-  margin: 0 auto;
+page-que-hacer-calendario .content-md {
+  background: url('../assets/img/fondo_calendario.png') center top no-repeat #003333;
+  background-size: 320px 568px;
 }
 
+.calendario-container ion-calendar {
+	width: 280px; 
+	margin: 50px auto 0;
 
-@media screen and (-webkit-device-pixel-ratio: 1.5) {
-  /* CSS for high-density screens */
-
-}
-
-@media screen and (-webkit-device-pixel-ratio: 0.75) {
-
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
-  /* iPhone 6 landscape */
-}
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) {
-  /* iPhone 6+ landscape */
-}
-
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
-  /* iPhone 6 and iPhone 6+ portrait and landscape */
-}
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){
-  /* iPhone 6 and iPhone 6+ landscape */
+	.button-md, .button-md:hover, .fab-md, .fab-md:hover {
+		box-shadow: none; background: none; color: #000; }
+	.ion-calendar-row {
+		margin: 0 auto; width: 240px !important;
+	}
+	.ion-calendar-row > div > div, .ion-calendar-row button {
+		line-height: 22px; height: 24px !important;
+		font-size: 13px;
+	}
 }

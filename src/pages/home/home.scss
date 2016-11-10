@@ -1,9 +1,9 @@
 page-home {
 
 }
-page-home ion-content {
-  background: url('../assets/img/bg-home.png') center top no-repeat;
-  background-size: 100%;
+page-home .app-container {
+  background: url('../assets/img/bg-home.png') center center no-repeat;
+  background-size: 320px 568px;
 }
 .home-btn{
   display: block;
@@ -12,71 +12,48 @@ page-home ion-content {
 .que-hacer-btn{
   background: url('../assets/img/1_1080x1920.png') center top no-repeat;
   background-size: 100%;
-  width: 26.5%;
-  height: 7em;
-  top: 6.9%;
-  right: 4%;
+  width: 84px;
+  height: 84px;
+  top: 39px;
+  right: 13px;
 }
 .donde-esta-btn {
   background: url('../assets/img/2_1080x1920.png') center top no-repeat;
-  background-size: 7em;
-  width: 7em;
-  height: 7em;
-  top: 7em;
-  left: 10.2em;
+  background-size: 100%;
+  width: 84px;
+  height: 84px;
+  top: 84px;
+  left: 125px;
 }
 .que-necesito-btn {
   background: url('../assets/img/3_1080x1920.png') center top no-repeat;
-  background-size: 7em;
-  width: 7em;
-  height: 7em;
-  top: 13em;
-  left: 3.4em;
+  background-size: 100%;
+  width: 84px;
+  height: 84px;
+  top: 157px;
+  left: 42px;
 }
 .consultanos-btn {
   background: url('../assets/img/4_1080x1920.png') center top no-repeat;
-  background-size: 7em;
-  width: 7em;
-  height: 7em;
-  top: 21.4em;
-  left: 1em;
+  background-size: 100%;
+  width: 84px;
+  height: 84px;
+  top: 258px;
+  left: 12px;
 }
 .vales-descuento-btn {
   background: url('../assets/img/5_1080x1920.png') center top no-repeat;
-  background-size: 7em;
-  width: 7em;
-  height: 7em;
-  top: 30.3em;
-  left: 1.5em;
+  background-size: 100%;
+  width: 84px;
+  height: 84px;
+  top: 365px;
+  left: 19px;
 }
 .zonas-wifi-btn {
   background: url('../assets/img/Boton_wifi.png') center top no-repeat;
-  background-size: 4.9em;
-  width: 4.9em;
-  height: 7.1em;
-  top: 29em;
-  left: 20em;
-}
-
-@media screen and (-webkit-device-pixel-ratio: 1.5) {
-  /* CSS for high-density screens */
-
-}
-
-@media screen and (-webkit-device-pixel-ratio: 0.75) {
-
-}
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
-  /* iPhone 6 landscape */
-}
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) {
-  /* iPhone 6+ landscape */
-}
-
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
-  /* iPhone 6 and iPhone 6+ portrait and landscape */
-}
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){
-  /* iPhone 6 and iPhone 6+ landscape */
+  background-size: 58px auto;
+  width: 66px;
+  height: 80px;
+  top: 356px;
+  left: 235px;
 }
