@@ -1,32 +1,46 @@
 page-actividades {
 
+	.list-md ion-item {
+		padding-left: 0;
+	}
 }
 page-actividades ion-content {
 
-}
-page-quehacer {
+	.list-md > .item-block:first-child { border-top: 0 none; }
 
-}
+	ion-item { position: relative; }
+	.item-md ion-thumbnail { min-height: 9.5rem; }
 
-@media screen and (-webkit-device-pixel-ratio: 1.5) {
-  /* CSS for high-density screens */
+	.item-md ion-thumbnail img { width: 85px; }
 
-}
+	.fecha { text-align: center; padding-left: 3px; margin: 0 3px 0 0 !important; width: 70px;
+		margin-top: 0px !important; padding: 9px 0;
+		position: relative; top: -17px; color: #fff; background-color: #000; }
 
-@media screen and (-webkit-device-pixel-ratio: 0.75) {
+	.dia { font-weight: bold; color: #FF6347; font-size: 1.4em; line-height: 1em; }
+	.mes { font-size: 0.55em; text-transform: uppercase; }
+	.hora-minutos { font-weight: bold; color: #FF6347; padding-top: 2px; display: inline-block; }
 
-}
+	ion-item:nth-child(even) {
+		.dia { color: #9932CC}
+		.hora-minutos { color: #9932CC }
+	
+		.actividad{
+			h2 { color: #9932CC }
+		}
+	}
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
-  /* iPhone 6 landscape */
-}
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) {
-  /* iPhone 6+ landscape */
-}
+	.label-md { margin-top: 0; padding-top: 0; }
 
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
-  /* iPhone 6 and iPhone 6+ portrait and landscape */
-}
-@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){
-  /* iPhone 6 and iPhone 6+ landscape */
+	.actividad {
+		width: 120px;
+		font-size: 0.8em;
+
+		h2 {
+			font-size: 1.2em;
+			margin-bottom: 0.4em; font-weight: bold; color: #FF6347
+		} 
+	}
+
+
 }

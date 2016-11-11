@@ -3,7 +3,10 @@ import { NavController,NavParams } from 'ionic-angular';
 
 import { ActividadesService } from '../../providers/actividades-service';
 
+import moment from 'moment';
 import { ENV } from '../../config/environment';
+
+import Actividad from '../../models/actividad';
 
 /*
   Generated class for the Actividades page.
@@ -18,7 +21,7 @@ import { ENV } from '../../config/environment';
 })
 export class ActividadesPage {
 
-  public actividades : any = null;
+  public actividades : Actividad[] = null;
 
   public urlBase : string = ENV.API_URL;
 
@@ -32,10 +35,27 @@ export class ActividadesPage {
   }
 
   cargarActividades(url: string){
-    this.service.load(url).then(data => {
-      this.actividades = data;
+    this.service.load(url).then( (data : Actividad[] )=> {
+
+      this.procesarActividades(data);
+      //this.actividades = data;
       //console.log(this.actividades);
     });
+  }
+
+  procesarActividades(data : Actividad[]){
+
+    let acts : Actividad[] = [], m, act;
+    for(let i=0;i<data.length;i++){
+      act = data[i];
+      m = moment(act.fecha_inicio, "YYYY-MM-DD HH:mm:ss");
+
+      act.dia = m.date();
+      act.mes = m.format('MMMM');
+      act.hora_minutos = m.hour()+':'+m.minutes();
+      acts.push(act);
+    }
+    this.actividades = acts;
   }
 
 }

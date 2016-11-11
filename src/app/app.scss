@@ -87,9 +87,6 @@ ion-content, .scroll-content {
 	background-color: #B4E8D3;
 }
 
-.list-md ion-item {
-	padding-left: 0;
-}
 .list-md .item-block .item-inner {
 	border-bottom: 0 none;
 }
@@ -106,6 +103,8 @@ ion-content, .scroll-content {
 .with-padding {
 	padding-left: 12px;
 }
+
 ion-header::after {
 	display: none;
 }
+.pull-left-clear { float: left; clear: both; }

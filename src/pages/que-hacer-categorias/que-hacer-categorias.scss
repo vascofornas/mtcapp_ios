@@ -4,6 +4,10 @@ page-que-hacer-categorias{
 page-que-hacer-categorias ion-content {
   width: 370px;
   margin: 0 auto;
+	.item-md.item-block .item-inner
+	{
+		padding-right: 0;
+	}
 }
 
 

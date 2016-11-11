@@ -22,7 +22,7 @@ export class ActividadesService {
     return new Promise(resolve => {
       this.http.get(ENV.API_URL+url)
         .map(res => res.json())
-        .subscribe(data => {
+        .subscribe( (data) => {
           resolve(data.actividades);
         });
     });

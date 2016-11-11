@@ -13,11 +13,19 @@
       <div *ngIf="actividades!==null">
         <ion-list>
           <ion-item *ngFor="let actividad of actividades">
-            <div item-left>{{ actividad.fecha_inicio }}</div>
+            <div class="clear"></div>
+            <div class="fecha" item-left>
+              <span class="dia">{{ actividad.dia }}</span><br />
+              <span class="mes">{{ actividad.mes }}</span><br />
+              <span class="hora-minutos">{{ actividad.hora_minutos }}</span>
+              </div>
             <ion-thumbnail>
               <img src="{{ urlBase + actividad.imagen }}">
             </ion-thumbnail>
-            <h2 item-right>{{ actividad.titulo }}</h2>
+            <div class="actividad" item-right>
+              <h2>{{ actividad.titulo }}</h2>
+              <span>{{ actividad.organizacion_nombre }}</span>
+            </div>
           </ion-item>
         </ion-list>
       </div>
