@@ -60,40 +60,25 @@ export class QueHacerCalendarioPage {
     this.calendar.currentDate = m.toDate();
   }
 
-   onTimeSelected(ev) {
-        console.log('Selected time: ' + ev.selectedTime + ', hasEvents: ' + (ev.events !== undefined && ev.events.length !== 0));
+  onTimeSelected(ev) {
+    let busqueda = ev.selectedTime.getUTCFullYear() + "-" +
+      (ev.selectedTime.getUTCMonth()+1) + "-" +
+      ev.selectedTime.getUTCDate();
+    let _url = '/api/que-hacer/agenda/'+busqueda;
+    this.navCtrl.push(ActividadesPage, {url: _url});
+
+    //console.log('Selected time: ' + ev.selectedTime + ', hasEvents: ' + (ev.events !== undefined && ev.events.length !== 0));
   }
 
-      onEventSelected(event) {
-        console.log('Event selected:' + event.startTime + '-' + event.endTime + ',' + event.title);
-}
+  onEventSelected(event) {
+    //console.log('Event selected:' + event.startTime + '-' + event.endTime + ',' + event.title);
+  }
 
   onCurrentDateChanged(event: Date) {
     this.mesActual = this.meses[this.calendar.currentDate.getMonth()];
     this.anioActual = this.calendar.currentDate.getFullYear();
-    //today.setHours(0, 0, 0, 0);
-    //event.setHours(0, 0, 0, 0);
-    //this.isToday = today.getTime() === event.getTime();
+
   }
-
-
-  seleccionarPeriodo(value){
-    //this.periodoSeleccionado = value;
-    console.log(value);
-    return;
-    /*
-    let dateObj = value.startDate;
-    let month = dateObj.getUTCMonth() + 1;
-    let day = dateObj.getUTCDate();
-    let year = dateObj.getUTCFullYear();
-    let busqueda = year + "-" + month + "-" + day;
-
-    let _url = '/api/que-hacer/agenda/'+busqueda;
-    console.log(_url);
-    //this.navCtrl.push(ActividadesPage, {url: _url});
-    */
-  }
-
 
   ionViewDidLoad() {
     //console.log('Hello QueHacerCalendarioPage Page');
