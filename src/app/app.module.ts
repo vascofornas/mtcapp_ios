@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { QueHacerPage } from '../pages/que-hacer/que-hacer';
@@ -12,7 +12,7 @@ import { TiposOrganizacionesPage } from '../pages/tipos-organizaciones/tipos-org
 import { OrganizacionesPorUbicacionPage } from '../pages/organizaciones-por-ubicacion/organizaciones-por-ubicacion';
 import { ConsultanosPage } from '../pages/consultanos/consultanos';
 
-import { IonCalendarModule } from '@ionic2-extra/calendar';
+import { NgCalendarModule  } from 'ionic2-calendar';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { IonCalendarModule } from '@ionic2-extra/calendar';
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    IonCalendarModule
+    NgCalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +46,6 @@ import { IonCalendarModule } from '@ionic2-extra/calendar';
     TiposOrganizacionesPage,
     ConsultanosPage
   ],
-  providers: [],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  providers: []
 })
 export class AppModule {}
