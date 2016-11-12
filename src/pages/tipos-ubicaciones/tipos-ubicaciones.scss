@@ -1,3 +1,9 @@
-page-tipos-ubicaciones {
+page-tipos-ubicaciones ion-content {
+	ion-item {
+		padding-left: 0;
+	}
+}
 
+page-tipos-ubicaciones .app-container {
+  background-color: #fff;
 }

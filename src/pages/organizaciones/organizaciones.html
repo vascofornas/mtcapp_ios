@@ -10,22 +10,17 @@
 </ion-header>
 
 <ion-content>
-
-  <div *ngIf="organizaciones !== null">
+  <div class="app-container">
+      <div *ngIf="organizaciones !== null">
     <ion-list>
-      <ion-item *ngFor="let organizacion of organizaciones">
-        <div item-left>{{ actividad.fecha_inicio }}</div>
-        <ion-thumbnail item-left *ngIf="organizacion.imagen">
-          <img src="{{ urlBase + organizacion.imagen }}">
-        </ion-thumbnail>
-        <h2>{{ organizacion.nombre }}</h2>
-        <a href="#" item-right *ngIf="organizacion.numero_hijos" (click)="cargarOrganizacion(organizacion.url_api)">
-          <ion-icon name="arrow-forward"></ion-icon>
-        </a>
-      </ion-item>
+      <organizacion *ngFor="let item of organizaciones"
+        [organizacion]="item" [isEven]="$index % 2 == 0">
+      </organizacion>
     </ion-list>
   </div>
   <div *ngIf="organizaciones === null">
     <ion-spinner name="bubbles"></ion-spinner>
   </div>
+  </div>
 </ion-content>
+<ion-footer></ion-footer>

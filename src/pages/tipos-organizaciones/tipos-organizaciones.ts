@@ -5,8 +5,6 @@ import { TiposOrganizacionService } from '../../providers/tipos-organizacion-ser
 
 import { OrganizacionesPorUbicacionPage } from '../organizaciones-por-ubicacion/organizaciones-por-ubicacion';
 
-import { ENV } from '../../config/environment';
-
 /*
   Generated class for the TiposOrganizaciones page.
 
@@ -21,8 +19,6 @@ import { ENV } from '../../config/environment';
 export class TiposOrganizacionesPage {
 
   public tipos_organizaciones = null;
-
-  public urlBase : string = ENV.API_URL;
 
   constructor(
     public navCtrl: NavController,

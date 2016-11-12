@@ -21,10 +21,10 @@ ion-spinner {
   display: block;
 }
 .scroll-content {
-  overflow-y: hidden;
+  
 }
 .content-md {
-	background-color: #003333;
+	background-color: #003837;
 }
 .platform-core .ion-page {
 	  /*
@@ -68,20 +68,12 @@ ion-content, .scroll-content {
 	color: #fff;
 }
 
-.top-app {
-	width: 320px;
-	margin: 0 auto;
-	height: 20px;
-	background-color: #003837;
-}
-.bottom-app {
+.bottom-app, ion-footer {
 	background: url('../assets/img/tira_base.png') center center no-repeat;
 	background-size: 320px;
     width: 320px;
     height: 46px;
     margin: 0 auto;
-    position: absolute;
-    bottom: 0;
 }
 .list-md ion-item:nth-child(even){
 	background-color: #B4E8D3;
@@ -94,7 +86,7 @@ ion-content, .scroll-content {
 	border-bottom: 1px solid #dedede;
 }
 .app-container .list-md ion-thumbnail {
-	margin: 0;
+	margin: 0 12px 0 0;
 }
 .item-md ion-thumbnail img {
 	max-width: 11rem;
@@ -108,3 +100,13 @@ ion-header::after {
 	display: none;
 }
 .pull-left-clear { float: left; clear: both; }
+.list-md { margin-bottom: 0; }
+
+ion-content {
+	.list-md > .item-block:first-child { border-top: 0 none; }
+	ion-item { position: relative; }
+
+	.item-md ion-thumbnail { min-height: 9.5rem; }
+
+	.item-md ion-thumbnail img { padding-right: 12px; }
+}	

@@ -1,0 +1,47 @@
+<!--
+  Generated template for the Organizacion component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-item [ngClass]="{'is-even': isEven}">
+	<ion-thumbnail item-left *ngIf="organizacion.imagen">
+	  <img class="a" src="{{ urlBase + organizacion.imagen }}">
+	</ion-thumbnail>
+	<h2>{{ organizacion.nombre }}</h2>
+	<a href="#" item-right *ngIf="organizacion.numero_hijos" (click)="cargarOrganizacion(organizacion.url_api)">
+	  <ion-icon name="arrow-forward"></ion-icon>
+	</a>
+</ion-item>
+<ion-item class="toolbar" *ngIf="organizacion.url_facebook || organizacion.url_twitter || organizacion.url_youtube || organizacion.telefono || organizacion.email">
+		<ul>
+			<li>
+	  <a class="" *ngIf="organizacion.url_facebook" href="#"
+	  	(click)="window.open(organizacion.url_facebook)">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  		</li>
+	  		<li>
+
+	  <a class="" *ngIf="organizacion.url_twitter" href="#"
+	  	(click)="window.open(organizacion.url_twitter)">
+	    <i class="fa fa-twitter"></i>
+	  </a>	
+	  </li>
+	  <li>  
+	  <a class="" *ngIf="organizacion.url_youtube" href="#"
+	  	(click)="window.open(organizacion.url_youtube)">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  </li>
+	  <li>
+	  <a class="" *ngIf="organizacion.url_youtube" href="#">
+	    <i class="fa fa-phone"></i>
+	  </a></li>
+	  <li>
+	  <a class="" *ngIf="organizacion.email" href="#">
+	    <ion-icon name="mail"></ion-icon>
+	  </a></li>
+	</ul>
+</ion-item>

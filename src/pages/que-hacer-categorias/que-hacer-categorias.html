@@ -4,7 +4,8 @@
 </ion-header>
 
 <ion-content>
-  <div *ngIf="categorias!==null">
+  <div class="app-container">
+      <div *ngIf="categorias!==null">
     <ion-list>
       <ion-item>
         <div item-left>
@@ -27,5 +28,6 @@
   <div *ngIf="categorias===null">
     <ion-spinner name="bubbles"></ion-spinner>
   </div>
-
+  </div>
 </ion-content>
+<ion-footer></ion-footer>

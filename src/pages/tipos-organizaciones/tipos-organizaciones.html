@@ -7,13 +7,14 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
+  <div class="app-container">
+
   <div *ngIf="tipos_organizaciones !== null">
     <ion-list>
       <ion-item *ngFor="let tipo_organizacion of tipos_organizaciones" (click)="cargarOrganizaciones(tipo_organizacion.url_api)">
@@ -27,4 +28,7 @@
   <div *ngIf="tipos_organizaciones === null">
     <ion-spinner name="bubbles"></ion-spinner>
   </div>
+
+  </div>
 </ion-content>
+<ion-footer></ion-footer>

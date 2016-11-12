@@ -10,32 +10,30 @@
 </ion-header>
 
 <ion-content>
-  <div *ngIf="datos && datos.tipos_ubicacion.length">
-    <ion-list>
-      <ion-item *ngFor="let tipo_ubicacion of datos.tipos_ubicacion"
-                (click)="cargarTiposUbicaciones(tipo_ubicacion.url_api)">
-        <ion-thumbnail item-left *ngIf="tipo_ubicacion.imagen">
-          <img src="{{ urlBase + tipo_ubicacion.imagen }}">
-        </ion-thumbnail>
-        <h2>{{ tipo_ubicacion.nombre }}</h2>
-      </ion-item>
-    </ion-list>
-  </div>
-  <div *ngIf="datos && datos.organizaciones.length">
-    <ion-list>
-      <ion-item *ngFor="let organizacion of datos.organizaciones">
-        <ion-thumbnail item-left *ngIf="organizacion.imagen">
-          <img src="{{ urlBase + organizacion.imagen }}">
-        </ion-thumbnail>
-        <h2>{{ organizacion.nombre }}</h2>
-        <a href="#" item-right *ngIf="organizacion.numero_hijos" (click)="cargarOrganizacion(organizacion.url_api)">
-          <ion-icon name="arrow-forward"></ion-icon>
-        </a>
-      </ion-item>
-    </ion-list>
-  </div>
+  <div class="app-container">
 
-  <div *ngIf="datos === null">
-    <ion-spinner name="bubbles"></ion-spinner>
+    <div *ngIf="datos && datos.tipos_ubicacion.length">
+      <ion-list>
+        <ion-item *ngFor="let tipo_ubicacion of datos.tipos_ubicacion"
+                  (click)="cargarTiposUbicaciones(tipo_ubicacion.url_api)">
+          <ion-thumbnail item-left *ngIf="tipo_ubicacion.imagen">
+            <img src="{{ urlBase + tipo_ubicacion.imagen }}">
+          </ion-thumbnail>
+          <h2>{{ tipo_ubicacion.nombre }}</h2>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngIf="datos && datos.organizaciones.length">
+      <ion-list>
+        <organizacion *ngFor="let item of datos.organizaciones"
+          [organizacion]="item" [isEven]="$index % 2 == 0">
+        </organizacion>
+      </ion-list>
+    </div>
+
+    <div *ngIf="datos === null">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </div>
   </div>
 </ion-content>
+<ion-footer></ion-footer>

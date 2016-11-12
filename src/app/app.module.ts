@@ -14,6 +14,9 @@ import { ConsultanosPage } from '../pages/consultanos/consultanos';
 
 import { NgCalendarModule  } from 'ionic2-calendar';
 
+import { OrganizacionComponent } from '../components/organizacion/organizacion';
+import { ActividadComponent } from '../components/actividad/actividad';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +29,9 @@ import { NgCalendarModule  } from 'ionic2-calendar';
     OrganizacionesPage,
     TiposOrganizacionesPage,
     OrganizacionesPorUbicacionPage,
-    ConsultanosPage
+    ConsultanosPage,
+    OrganizacionComponent,
+    ActividadComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -44,7 +49,9 @@ import { NgCalendarModule  } from 'ionic2-calendar';
     OrganizacionesPage,
     OrganizacionesPorUbicacionPage,
     TiposOrganizacionesPage,
-    ConsultanosPage
+    ConsultanosPage,
+    OrganizacionComponent,
+    ActividadComponent
   ],
   providers: []
 })

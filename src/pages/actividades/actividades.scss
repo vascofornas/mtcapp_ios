@@ -3,15 +3,11 @@ page-actividades {
 	.list-md ion-item {
 		padding-left: 0;
 	}
+	.label-md {
+		margin-right: 0;
+	}
 }
 page-actividades ion-content {
-
-	.list-md > .item-block:first-child { border-top: 0 none; }
-
-	ion-item { position: relative; }
-	.item-md ion-thumbnail { min-height: 9.5rem; }
-
-	.item-md ion-thumbnail img { width: 85px; }
 
 	.fecha { text-align: center; padding-left: 3px; margin: 0 3px 0 0 !important; width: 70px;
 		margin-top: 0px !important; padding: 9px 0;

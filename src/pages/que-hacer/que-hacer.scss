@@ -2,6 +2,11 @@ page-quehacer ion-content {
 
 	.list-md ion-item {
 		padding-left: 0;
+
+		img {
+			width: 11rem !important;
+			height: 10rem !important;
+		}
 	}
 }
 page-quehacer .app-container {

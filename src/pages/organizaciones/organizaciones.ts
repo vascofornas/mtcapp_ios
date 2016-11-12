@@ -30,6 +30,10 @@ export class OrganizacionesPage {
 
   }
 
+  openUrl(url){
+    window.open(url);
+  }
+
   cargarOrganizaciones(url){
     this.service.load(url).then(data => {
       console.log(data);

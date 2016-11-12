@@ -12,6 +12,9 @@ page-que-hacer-calendario .content-md {
 	.avanzar {
 		display: block; float: right;
 	}
+	.monthview-selected {
+		background-color: #0000FF;
+	}
 }
 
 page-que-hacer-calendario .toolbar-background {
@@ -20,12 +23,15 @@ page-que-hacer-calendario .toolbar-background {
 	box-shadow: none;
 }
 
+page-que-hacer-calendario ion-content .calendario-container {
+	padding-top: 40px;
+}
+
 page-que-hacer-calendario ion-content .calendario-container calendar {
-	width: 280px; 
-	margin: 50px auto 0;
+	margin: 0 auto 0;
 
 	.table-bordered {
-		width: 280px; margin: 0 auto; border: 0 none;
+		width: 240px; margin: 0 auto; border: 0 none;
 		th, td { font-size: 0.6em;
 		    border: 0 none !important;
 		    padding: 3px 0 !important; }
