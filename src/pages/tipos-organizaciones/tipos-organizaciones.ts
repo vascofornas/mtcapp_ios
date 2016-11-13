@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { TiposOrganizacionService } from '../../providers/tipos-organizacion-service';
 
-import { OrganizacionesPorUbicacionPage } from '../organizaciones-por-ubicacion/organizaciones-por-ubicacion';
+import { OrganizacionesPage } from '../organizaciones/organizaciones';
 
 /*
   Generated class for the TiposOrganizaciones page.
@@ -42,7 +42,7 @@ export class TiposOrganizacionesPage {
   }
 
   cargarOrganizaciones(url){
-    this.navCtrl.push(OrganizacionesPorUbicacionPage, {url: url});
+    this.navCtrl.push(OrganizacionesPage, {url: url, modo: 'que-necesito'});
   }
 
 }

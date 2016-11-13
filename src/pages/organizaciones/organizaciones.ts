@@ -22,8 +22,12 @@ export class OrganizacionesPage {
 
   public urlBase : string = ENV.API_URL;
 
+  public modo : string = 'normal';
+
   constructor(public navCtrl: NavController, public params: NavParams, public service: OrganizacionService) {
     this.cargarOrganizaciones(params.get("url"));
+    this.modo = params.get('modo');
+    if(!this.modo) this.modo = 'normal';
   }
 
   ionViewDidLoad() {
@@ -36,7 +40,7 @@ export class OrganizacionesPage {
 
   cargarOrganizaciones(url){
     this.service.load(url).then(data => {
-      console.log(data);
+      //console.log(data);
       this.organizaciones = data;
     });
   }

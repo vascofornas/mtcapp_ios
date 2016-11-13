@@ -1,6 +1,10 @@
 import { Component, Input } from '@angular/core';
 
+import { NavController } from 'ionic-angular';
+
 import Organizacion from '../../models/organizacion';
+
+import { OrganizacionesPage } from '../../pages/organizaciones/organizaciones';
 
 import { ENV } from '../../config/environment';
 
@@ -21,8 +25,14 @@ export class OrganizacionComponent {
   @Input() isEven : boolean;
   @Input() organizacion : Organizacion;
 
-  constructor() {
-    
+  @Input() modo : string;
+
+  constructor(public navCtrl: NavController) {
+    //console.log(this.modo);
   }
 
+  cargarOrganizacion(url){
+    this.navCtrl.push(OrganizacionesPage, {url: url});
+  }
+  
 }

@@ -23,10 +23,10 @@
         </ion-item>
       </ion-list>
     </div>
-    <div *ngIf="datos && datos.organizaciones.length">
+    <div class="no-padding" *ngIf="datos && datos.organizaciones.length">
       <ion-list>
-        <organizacion *ngFor="let item of datos.organizaciones"
-          [organizacion]="item" [isEven]="$index % 2 == 0">
+        <organizacion *ngFor="let item of datos.organizaciones; let i = index"
+          [organizacion]="item" [isEven]="i % 2 != 0" modo="'donde-esta'">
         </organizacion>
       </ion-list>
     </div>

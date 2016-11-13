@@ -13,8 +13,8 @@
   <div class="app-container">
       <div *ngIf="organizaciones !== null">
     <ion-list>
-      <organizacion *ngFor="let item of organizaciones"
-        [organizacion]="item" [isEven]="$index % 2 == 0">
+      <organizacion *ngFor="let item of organizaciones; let i = index"
+        [organizacion]="item" [isEven]="i % 2 != 0" [modo]="modo">
       </organizacion>
     </ion-list>
   </div>

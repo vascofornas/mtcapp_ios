@@ -1,3 +1,44 @@
 organizacion {
+	ion-item {
+		background-color: #fff !important;
+		border-bottom: 0 none !important;
 
+		.item-inner {
+			h2 { font-size: 1.15rem;
+				width: 140px;
+				word-wrap: break-word;
+				white-space: normal;
+				font-weight: bold; }
+			p {
+				width: 140px;
+				font-size: 1rem;
+				white-space: normal;
+				word-wrap: break-word;
+			}
+		}
+	}
+	ion-item.is-even {
+		background-color: #B4E8D3 !important;
+	}
+	.org-toolbar {
+		border-bottom: 1px solid #dedede !important;
+	
+		.label-md {
+			margin-top: 0; margin-bottom: 0;
+		}
+	}
+	.org-toolbar ul, .org-toolbar li {
+		list-style: none;
+		margin: 0; padding: 0;
+	}
+	.org-toolbar ul {
+		text-align: left;
+		width: 256px; display: block;
+		margin: 0 0 0 50px;
+	}
+	.org-toolbar li {
+		width: 50px;
+		display: inline-block;
+		a { color: #000; }
+	}
 }

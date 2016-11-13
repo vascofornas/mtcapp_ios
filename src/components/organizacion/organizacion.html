@@ -9,12 +9,28 @@
 	<ion-thumbnail item-left *ngIf="organizacion.imagen">
 	  <img class="a" src="{{ urlBase + organizacion.imagen }}">
 	</ion-thumbnail>
+	<ion-thumbnail item-left *ngIf="!organizacion.imagen">
+		<img class="a" src="assets/img/placeholder.png">
+	</ion-thumbnail>
 	<h2>{{ organizacion.nombre }}</h2>
-	<a href="#" item-right *ngIf="organizacion.numero_hijos" (click)="cargarOrganizacion(organizacion.url_api)">
-	  <ion-icon name="arrow-forward"></ion-icon>
-	</a>
+	<p>
+		{{ organizacion.direccion }}<br />
+		{{ organizacion.telefono }}
+	</p>
+	
+	<template *ngIf="modo != 'que-necesito'">	
+		<a href="#" item-right *ngIf="organizacion.numero_hijos" (click)="cargarOrganizacion(organizacion.url_api)">
+		  <ion-icon name="arrow-forward"></ion-icon>
+		</a>
+	</template>
+	<template *ngIf="modo == 'que-necesito' && organizacion.latitud && organizacion.longitud">
+		<a href="#" item-right
+		(click)="window.open('href=//maps.google.com/maps?z=12&amp;t=m&amp;q=loc:'+organizacion.latitud+'+'+organizacion.longitud)">
+		  <ion-icon name="fa fa-map-marker"></ion-icon>
+		</a>
+	</template>
 </ion-item>
-<ion-item class="toolbar" *ngIf="organizacion.url_facebook || organizacion.url_twitter || organizacion.url_youtube || organizacion.telefono || organizacion.email">
+<ion-item class="org-toolbar" *ngIf="organizacion.url_facebook || organizacion.url_twitter || organizacion.url_youtube || organizacion.telefono || organizacion.email">
 		<ul>
 			<li>
 	  <a class="" *ngIf="organizacion.url_facebook" href="#"

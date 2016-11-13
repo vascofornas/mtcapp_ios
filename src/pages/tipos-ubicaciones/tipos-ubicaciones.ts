@@ -45,7 +45,7 @@ export class TiposUbicacionesPage {
   }
 
   cargarOrganizacion(url){
-    this.navCtrl.push(OrganizacionesPage, {url: url});
+    this.navCtrl.push(OrganizacionesPage, {url: url, modo: 'donde-esta'});
   }
 }
 

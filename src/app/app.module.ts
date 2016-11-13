@@ -9,11 +9,8 @@ import { QueHacerCalendarioPage } from '../pages/que-hacer-calendario/que-hacer-
 import { TiposUbicacionesPage } from '../pages/tipos-ubicaciones/tipos-ubicaciones';
 import { OrganizacionesPage } from '../pages/organizaciones/organizaciones';
 import { TiposOrganizacionesPage } from '../pages/tipos-organizaciones/tipos-organizaciones';
-import { OrganizacionesPorUbicacionPage } from '../pages/organizaciones-por-ubicacion/organizaciones-por-ubicacion';
 import { ConsultanosPage } from '../pages/consultanos/consultanos';
-
 import { NgCalendarModule  } from 'ionic2-calendar';
-
 import { OrganizacionComponent } from '../components/organizacion/organizacion';
 import { ActividadComponent } from '../components/actividad/actividad';
 
@@ -28,7 +25,6 @@ import { ActividadComponent } from '../components/actividad/actividad';
     TiposUbicacionesPage,
     OrganizacionesPage,
     TiposOrganizacionesPage,
-    OrganizacionesPorUbicacionPage,
     ConsultanosPage,
     OrganizacionComponent,
     ActividadComponent
@@ -47,7 +43,6 @@ import { ActividadComponent } from '../components/actividad/actividad';
     QueHacerCalendarioPage,
     TiposUbicacionesPage,
     OrganizacionesPage,
-    OrganizacionesPorUbicacionPage,
     TiposOrganizacionesPage,
     ConsultanosPage,
     OrganizacionComponent,
