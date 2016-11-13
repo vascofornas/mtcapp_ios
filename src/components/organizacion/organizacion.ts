@@ -28,11 +28,14 @@ export class OrganizacionComponent {
   @Input() modo : string;
 
   constructor(public navCtrl: NavController) {
-    //console.log(this.modo);
   }
 
   cargarOrganizacion(url){
     this.navCtrl.push(OrganizacionesPage, {url: url});
+  }
+
+  openMap(latitud, longitud){
+    window.open('href=//maps.google.com/maps?z=12&amp;t=m&amp;q=loc:'+latitud.toString()+'+'+longitud.toString());
   }
   
 }

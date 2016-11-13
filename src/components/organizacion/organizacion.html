@@ -5,7 +5,7 @@
   for more info on Angular 2 Components.
 -->
 
-<ion-item [ngClass]="{'is-even': isEven}">
+<ion-item [ngClass]="{'is-even': isEven, 'no-image': !organizacion.imagen }">
 	<ion-thumbnail item-left *ngIf="organizacion.imagen">
 	  <img class="a" src="{{ urlBase + organizacion.imagen }}">
 	</ion-thumbnail>
@@ -14,50 +14,47 @@
 	</ion-thumbnail>
 	<h2>{{ organizacion.nombre }}</h2>
 	<p>
-		{{ organizacion.direccion }}<br />
-		{{ organizacion.telefono }}
+		<span *ngIf="organizacion.direccion">{{ organizacion.direccion }}<br /></span>
+		<span *ngIf="organizacion.telefono">Tlf: {{ organizacion.telefono }}<br /></span>
+		<span *ngIf="organizacion.url">{{ organizacion.url }}<br /></span>
+		<span class="ln-break" *ngIf="organizacion.descripcion">{{ organizacion.descripcion }}</span>
 	</p>
-	
-	<template *ngIf="modo != 'que-necesito'">	
-		<a href="#" item-right *ngIf="organizacion.numero_hijos" (click)="cargarOrganizacion(organizacion.url_api)">
-		  <ion-icon name="arrow-forward"></ion-icon>
-		</a>
-	</template>
-	<template *ngIf="modo == 'que-necesito' && organizacion.latitud && organizacion.longitud">
-		<a href="#" item-right
-		(click)="window.open('href=//maps.google.com/maps?z=12&amp;t=m&amp;q=loc:'+organizacion.latitud+'+'+organizacion.longitud)">
-		  <ion-icon name="fa fa-map-marker"></ion-icon>
-		</a>
-	</template>
+	<a item-right *ngIf="modo != 'que-necesito' && organizacion.numero_hijos" href="#" (click)="cargarOrganizacion(organizacion.url_api)">
+		<ion-icon name="arrow-forward"></ion-icon>
+	</a>
+	<a item-right *ngIf="modo == 'que-necesito'" href="#" (click)="openMap(organizacion.latitud, organizacion.longitud)">
+		<i class="fa fa-map-marker"></i>
+	</a>
 </ion-item>
-<ion-item class="org-toolbar" *ngIf="organizacion.url_facebook || organizacion.url_twitter || organizacion.url_youtube || organizacion.telefono || organizacion.email">
-		<ul>
-			<li>
-	  <a class="" *ngIf="organizacion.url_facebook" href="#"
+<ion-item class="org-toolbar" *ngIf="organizacion.url_facebook != null || organizacion.url_twitter != null || organizacion.url_youtube != null || organizacion.telefono != null || organizacion.email != null">
+	<ul>
+	<li>
+	  <a class="" *ngIf="organizacion.url_facebook != null" href="#"
 	  	(click)="window.open(organizacion.url_facebook)">
 	    <i class="fa fa-facebook"></i>
 	  </a>
-	  		</li>
-	  		<li>
-
-	  <a class="" *ngIf="organizacion.url_twitter" href="#"
+	</li>
+	<li>
+	  <a class="" *ngIf="organizacion.url_twitter != null" href="#"
 	  	(click)="window.open(organizacion.url_twitter)">
 	    <i class="fa fa-twitter"></i>
 	  </a>	
-	  </li>
-	  <li>  
-	  <a class="" *ngIf="organizacion.url_youtube" href="#"
+	</li>
+	<li>  
+	  <a class="" *ngIf="organizacion.url_youtube != null" href="#"
 	  	(click)="window.open(organizacion.url_youtube)">
 	    <i class="fa fa-youtube"></i>
 	  </a>
-	  </li>
-	  <li>
-	  <a class="" *ngIf="organizacion.url_youtube" href="#">
+	</li>
+	<li>
+	  <a class="" *ngIf="organizacion.url_telefono != null" href="#">
 	    <i class="fa fa-phone"></i>
-	  </a></li>
-	  <li>
-	  <a class="" *ngIf="organizacion.email" href="#">
+	  </a>
+	</li>
+	<li>
+	  <a class="" *ngIf="organizacion.email != null" href="#">
 	    <ion-icon name="mail"></ion-icon>
-	  </a></li>
+	  </a>
+	</li>
 	</ul>
 </ion-item>

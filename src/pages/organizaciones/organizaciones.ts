@@ -27,7 +27,7 @@ export class OrganizacionesPage {
   constructor(public navCtrl: NavController, public params: NavParams, public service: OrganizacionService) {
     this.cargarOrganizaciones(params.get("url"));
     this.modo = params.get('modo');
-    if(!this.modo) this.modo = 'normal';
+    if(!this.modo) this.modo = 'donde-esta';
   }
 
   ionViewDidLoad() {

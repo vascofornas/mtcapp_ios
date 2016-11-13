@@ -33,7 +33,7 @@ export class TiposOrganizacionesPage {
   }
 
   cargarTiposOrganizaciones(url){
-    console.log(url);
+    //console.log(url);
 
     this.tiposOrganizacionService.load(url).then(data => {
       //console.log(data);
