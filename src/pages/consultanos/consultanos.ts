@@ -16,7 +16,7 @@ export class ConsultanosPage {
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    console.log('Hello ConsultanosPage Page');
+
   }
 
 }

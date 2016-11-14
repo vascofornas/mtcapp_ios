@@ -15,7 +15,7 @@ export class ActividadComponent {
   text: string;
 
   constructor() {
-    console.log('Hello Actividad Component');
+    //console.log('Hello Actividad Component');
     this.text = 'Hello World';
   }
 

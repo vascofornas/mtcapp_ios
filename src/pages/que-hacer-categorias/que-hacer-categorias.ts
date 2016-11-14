@@ -23,7 +23,7 @@ export class QueHacerCategoriasPage {
    this.queHacerService.load()
    .then(data => {
    this.categorias = data;
-    console.log(this.categorias);
+    //console.log(this.categorias);
    });
   }
 

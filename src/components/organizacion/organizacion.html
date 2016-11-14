@@ -19,40 +19,40 @@
 		<span *ngIf="organizacion.url">{{ organizacion.url }}<br /></span>
 		<span class="ln-break" *ngIf="organizacion.descripcion">{{ organizacion.descripcion }}</span>
 	</p>
-	<a item-right *ngIf="modo != 'que-necesito' && organizacion.numero_hijos" href="#" (click)="cargarOrganizacion(organizacion.url_api)">
+	<a item-right *ngIf="modo != 'que-necesito' && organizacion.numero_hijos" href="javascript:;" (click)="cargarOrganizacion(organizacion.url_api)">
 		<ion-icon name="arrow-forward"></ion-icon>
 	</a>
-	<a item-right *ngIf="modo == 'que-necesito'" href="#" (click)="openMap(organizacion.latitud, organizacion.longitud)">
+	<a item-right *ngIf="modo == 'que-necesito'" href="javascript:;" (click)="openMap(organizacion.latitud, organizacion.longitud)">
 		<i class="fa fa-map-marker"></i>
 	</a>
 </ion-item>
 <ion-item class="org-toolbar" *ngIf="organizacion.url_facebook != null || organizacion.url_twitter != null || organizacion.url_youtube != null || organizacion.telefono != null || organizacion.email != null">
 	<ul>
 	<li>
-	  <a class="" *ngIf="organizacion.url_facebook != null" href="#"
+	  <a class="" *ngIf="organizacion.url_facebook != null" href="javascript:;"
 	  	(click)="window.open(organizacion.url_facebook)">
 	    <i class="fa fa-facebook"></i>
 	  </a>
 	</li>
 	<li>
-	  <a class="" *ngIf="organizacion.url_twitter != null" href="#"
+	  <a class="" *ngIf="organizacion.url_twitter != null" href="javascript:;"
 	  	(click)="window.open(organizacion.url_twitter)">
 	    <i class="fa fa-twitter"></i>
 	  </a>	
 	</li>
 	<li>  
-	  <a class="" *ngIf="organizacion.url_youtube != null" href="#"
+	  <a class="" *ngIf="organizacion.url_youtube != null" href="javascript:;"
 	  	(click)="window.open(organizacion.url_youtube)">
 	    <i class="fa fa-youtube"></i>
 	  </a>
 	</li>
 	<li>
-	  <a class="" *ngIf="organizacion.url_telefono != null" href="#">
+	  <a class="" *ngIf="organizacion.url_telefono != null" href="javascript:;">
 	    <i class="fa fa-phone"></i>
 	  </a>
 	</li>
 	<li>
-	  <a class="" *ngIf="organizacion.email != null" href="#">
+	  <a class="" *ngIf="organizacion.email != null" href="javascript:;">
 	    <ion-icon name="mail"></ion-icon>
 	  </a>
 	</li>

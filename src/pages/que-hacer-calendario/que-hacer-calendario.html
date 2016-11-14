@@ -11,11 +11,11 @@
 <ion-content>
 	<div class="app-container">
 	  <div class="calendario-container">
-      <a href="#" (click)="retrocederMes()" class="pull-left">
+      <a href="javascript:;" (click)="retrocederMes()" class="pull-left">
         <ion-icon name="arrow-back"></ion-icon>
       </a>
       <span class="mes-actual">{{mesActual}} {{anioActual}}</span>
-      <a href="#" (click)="avanzarMes()" class="pull-right">
+      <a href="javascript:;" (click)="avanzarMes()" class="pull-right">
         <ion-icon name="arrow-forward"></ion-icon>
       </a>
 	    <calendar [eventSource]="eventSource"

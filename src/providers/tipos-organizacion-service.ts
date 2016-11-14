@@ -23,7 +23,7 @@ export class TiposOrganizacionService {
     return new Promise(resolve => {
 
       var path = ENV.API_URL+url;
-      console.log(path);
+      //console.log(path);
 
       this.http.get(path)
         .map(res => res.json())

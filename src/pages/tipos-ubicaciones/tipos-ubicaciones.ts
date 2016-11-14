@@ -35,7 +35,7 @@ export class TiposUbicacionesPage {
 
   cargarTiposUbicaciones(url){
     this.service.load(url).then(data => {
-      console.log(data);
+      //console.log(data);
       this.datos = data;
     });
   }

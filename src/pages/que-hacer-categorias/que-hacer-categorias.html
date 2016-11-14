@@ -11,7 +11,7 @@
         <div item-left>
           <h2>¿Por Concejalias?</h2>
           <div *ngFor="let concejalia of categorias.concejalias">
-            <a href="#" (click)="verActividades(concejalia.url_api)"> {{concejalia.nombre}}</a>
+            <a href="javascript:;" (click)="verActividades(concejalia.url_api)"> {{concejalia.nombre}}</a>
           </div>
         </div>
       </ion-item>
@@ -19,7 +19,7 @@
         <div item-left>
           <h2>¿Por actividades?</h2>
           <div *ngFor="let tipoActividad of categorias.tipos_actividad">
-            <a href="#" (click)="verActividades(tipoActividad.url_api)"> {{tipoActividad.nombre}}</a>
+            <a href="javascript:;" (click)="verActividades(tipoActividad.url_api)"> {{tipoActividad.nombre}}</a>
           </div>
         </div>
       </ion-item>
