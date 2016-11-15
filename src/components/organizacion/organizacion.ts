@@ -35,7 +35,7 @@ export class OrganizacionComponent {
   }
 
   openMap(latitud, longitud){
-    window.open('href=//maps.google.com/maps?z=12&amp;t=m&amp;q=loc:'+latitud.toString()+'+'+longitud.toString());
+    window.open('href://maps.google.com/maps?z=12&amp;t=m&amp;q=loc:'+latitud.toString()+'+'+longitud.toString());
   }
   
 }
