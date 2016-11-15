@@ -30,6 +30,9 @@
         </organizacion>
       </ion-list>
     </div>
+    <ion-list *ngIf="datos && !datos.organizaciones.length && !datos.tipos_ubicacion.length">
+      <ion-item class="with-padding">No se encontraron resultados</ion-item>
+    </ion-list>
 
     <div *ngIf="datos === null">
       <ion-spinner name="bubbles"></ion-spinner>

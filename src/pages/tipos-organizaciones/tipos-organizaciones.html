@@ -23,6 +23,9 @@
         </ion-thumbnail>
         <h2>{{ tipo_organizacion.nombre }}</h2>
       </ion-item>
+      <ion-item class="with-padding" *ngIf="tipos_organizaciones.length == 0">
+        No se encontraron resultados
+      </ion-item>
     </ion-list>
   </div>
   <div *ngIf="tipos_organizaciones === null">

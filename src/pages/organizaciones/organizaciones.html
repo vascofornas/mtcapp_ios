@@ -16,6 +16,9 @@
       <organizacion *ngFor="let item of organizaciones; let i = index"
         [organizacion]="item" [isEven]="i % 2 != 0" [modo]="modo">
       </organizacion>
+        <ion-item class="with-padding" *ngIf="organizaciones.length == 0">
+          No se encontraron resultados
+        </ion-item>
     </ion-list>
   </div>
   <div *ngIf="organizaciones === null">

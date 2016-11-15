@@ -51,7 +51,7 @@ ion-spinner {
   margin: 0 auto;
 	width: 320px;
 	height: 568px;
-
+	background-color: #fff;
 }
 
 ion-content, .scroll-content {
@@ -94,7 +94,7 @@ ion-content, .scroll-content {
 	max-height: 12rem;
 }
 .with-padding {
-	padding-left: 12px;
+	padding-left: 12px !important;
 }
 
 ion-header::after {
