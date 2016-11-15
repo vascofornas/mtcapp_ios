@@ -1,12 +1,21 @@
 page-quehacer ion-content {
 
-	.list-md ion-item {
+	.list-md ion-item,
+	.list-ios ion-item,
+	.list-wp ion-item {
 		padding-left: 0;
 
 		img {
 			width: 11rem !important;
-			height: 10rem !important;
+			max-width: 11rem !important;
+			height: 11rem !important;
+			max-height: 11rem !important;
 		}
+	}
+	.list-ios ion-item img,
+	.list-wp ion-item img {
+		width: 10rem !important;
+		max-width: 10rem !important;
 	}
 }
 page-quehacer .app-container {

@@ -1,9 +1,13 @@
 page-consultanos  ion-content {
 
+	ion-label {
+		overflow: visible;
+	}
+
 	.app-container {
   		background-color: #fff;
 	
-		h2 { font-weight: bold; font-size: 1.8rem; position: relative; top: -1rem;
+		h2 { font-weight: bold; font-size: 1.8rem; position: relative; top: -2rem;
 			small {  }
 		}
 
@@ -11,19 +15,19 @@ page-consultanos  ion-content {
 			display: block;
 			color: #fff;
 			background-color: #000;
-			width: 3em;
-			height: 3em;
-			line-height: 3em;
-			border-radius: 1.5em;
+			width: 3.6em;
+			height: 3.6em;
+			line-height: 3.6em;
+			border-radius: 1.8em;
 			text-align: center;
 		}
 		a ion-icon {
-			font-size: 1.8em;
+			font-size: 4rem;
 		}
 
 	}
 
-	.item-md
+	.item-block
 	{
 		padding-left: 0;
 

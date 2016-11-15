@@ -30,7 +30,10 @@ import { ActividadComponent } from '../components/actividad/actividad';
     ActividadComponent
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      backButtonText: '',
+      iconMode: 'ios'
+    }),
     NgCalendarModule
   ],
   bootstrap: [IonicApp],

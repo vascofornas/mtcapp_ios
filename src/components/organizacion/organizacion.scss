@@ -5,18 +5,23 @@ organizacion {
 
 		.item-inner {
 			h2 { font-size: 1.15rem;
-				width: 170px;
+				width: 160px;
 				word-wrap: break-word;
 				white-space: normal;
 				font-weight: bold; }
 			p {
-				width: 170px;
-				font-size: 0.8rem;
+				width: 160px;
+				font-size: 0.9rem;
 				white-space: normal;
 				word-wrap: break-word;
 				padding-top: 4px;
 			}
 		}
+
+		.size { font-size: 2rem; }
+	}
+	.with-border {
+		border-bottom: 1px solid #dedede !important;
 	}
 	ion-item.is-even {
 		background-color: #B4E8D3 !important;
@@ -44,5 +49,6 @@ organizacion {
 	}
 	.ln-break {
 		white-space: nowrap;
+		display: block;
 	}
 }

@@ -14,7 +14,7 @@
 
     <div *ngIf="datos && datos.tipos_ubicacion.length">
       <ion-list>
-        <ion-item *ngFor="let tipo_ubicacion of datos.tipos_ubicacion"
+        <ion-item class="tipo-ubicacion" [ngClass]="{'no-padding': tipo_ubicacion.imagen }" *ngFor="let tipo_ubicacion of datos.tipos_ubicacion"
                   (click)="cargarTiposUbicaciones(tipo_ubicacion.url_api)">
           <ion-thumbnail item-left *ngIf="tipo_ubicacion.imagen">
             <img src="{{ urlBase + tipo_ubicacion.imagen }}">
@@ -39,4 +39,4 @@
     </div>
   </div>
 </ion-content>
-<ion-footer></ion-footer>
+<ion-footer><div></div></ion-footer>

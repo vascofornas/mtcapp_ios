@@ -23,28 +23,30 @@ ion-spinner {
 .scroll-content {
   
 }
-.content-md, body, html {
+.content-md, body, html,
+.content-ios, .content-wp, ion-footer {
 	background-color: #003837 !important;
 }
 
 .platform-core .ion-page {
 	  
+	  /*
 	width: 320px;
 	height: 480px;
-
-	  /*
+	*/
+/*
   width: 320px;
   height: 568px;
-  	*/
-  
+  */
 	/*
 	width: 414px;
 	height: 736px;
 	*/
-	  /*  
+  
+  	
 	width: 414px;
 	height: 736px;
-  */
+	
 
   	/*
 	width: 360px;
@@ -54,8 +56,7 @@ ion-spinner {
 .app-container {
   position: relative;
   margin: 0 auto;
-	width: 320px;
-	height: 568px;
+	width: 320px; height: 100%;
 	background-color: #fff;
 }
 
@@ -74,27 +75,32 @@ ion-content, .scroll-content {
 	color: #fff;
 }
 
-.bottom-app, ion-footer {
+ion-footer div {
 	background: url('../assets/img/tira_base.png') center center no-repeat;
 	background-size: 320px;
     width: 320px;
     height: 46px;
     margin: 0 auto;
 }
-.list-md ion-item:nth-child(even){
+ion-item:nth-child(even),
+{
 	background-color: #B4E8D3;
 }
 
-.list-md .item-block .item-inner {
-	border-bottom: 0 none;
+.item-block .item-inner {
+	border-bottom: 0 none !important;
 }
-.list-md > .item-block {
+.item-block {
 	border-bottom: 1px solid #dedede;
 }
-.app-container .list-md ion-thumbnail {
+.app-container .list-md ion-thumbnail,
+.app-container .list-ios ion-thumbnail,
+.app-container .list-wp ion-thumbnail {
 	margin: 0 12px 0 0;
 }
-.item-md ion-thumbnail img {
+.item-md ion-thumbnail img,
+.item-ios ion-thumbnail img,
+.item-wp ion-thumbnail img  {
 	max-width: 11rem;
 	max-height: 12rem;
 }
@@ -106,13 +112,20 @@ ion-header::after {
 	display: none;
 }
 .pull-left-clear { float: left; clear: both; }
-.list-md { margin-bottom: 0; }
+.list-md, .list-ios, .list-wp { margin-bottom: 0; }
 
 ion-content {
-	.list-md > .item-block:first-child { border-top: 0 none; }
+	.list-md > .item-block:first-child,
+	.list-ios > .item-block:first-child,
+	.list-wp > .item-block:first-child { border-top: 0 none; }
 	ion-item { position: relative; }
 
-	.item-md ion-thumbnail { min-height: 9.5rem; }
+	.item-md ion-thumbnail,
+	.item-ios ion-thumbnail,
+	.item-wp ion-thumbnail { min-height: 9.5rem; }
 
-	.item-md ion-thumbnail img { padding-right: 12px; }
-}	
+	.item-md ion-thumbnail img,
+	.item-ios ion-thumbnail img 
+	.item-wp ion-thumbnail img  { padding-right: 12px; }
+}
+.back-button { color: #fff; }

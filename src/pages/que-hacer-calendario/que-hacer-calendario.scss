@@ -1,13 +1,12 @@
-page-que-hacer-calendario .content-md {
-  background: url('../assets/img/fondo_calendario.png') center top no-repeat #003333;
+page-que-hacer-calendario ion-content {
+  background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
   background-size: 320px 568px;
 
 	.retroceder {
 		display: block; float: left;
 	}
 	.mes-actual {
-		/*display: block; margin-left: 40px;
-		margin-right: 40px; */ text-align: center;
+		text-transform: uppercase; text-align: center;
 	}
 	.avanzar {
 		display: block; float: right;
@@ -21,11 +20,20 @@ page-que-hacer-calendario .app-container {
 
 	.calendario-tools {
 		width: 270px;
-		margin: 0 auto 14px;
+		margin: 4rem auto 2rem;
 		text-align: center;
 		a {
 			color: #000;
 		}
+	}
+
+	td {
+		height: 35px;
+		line-height: 35px!important;
+	}
+
+	thead {
+		display: none;
 	}
 }
 
@@ -49,4 +57,38 @@ page-que-hacer-calendario ion-content .calendario-container calendar {
 		    padding: 3px 0 !important; }
 	}
 	
+}
+
+@media only screen
+and (max-device-height : 480px) 
+and (orientation : portrait) {
+  page-que-hacer-calendario ion-content {
+    background-size: 270px 480px;
+  }
+  page-que-hacer-calendario .toolbar-background {
+  	background-size: 270px;
+  }
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 413px)
+and (orientation : portrait) {
+  page-que-hacer-calendario ion-content {
+    background-size: 375px 667px;
+  }
+  page-que-hacer-calendario .toolbar-background {
+  	background-size: 375px;
+  }
+}
+
+@media only screen 
+and (min-device-width : 414px) {
+  page-que-hacer-calendario ion-content {
+	
+    background-size: 414px 736px;
+  }
+  page-que-hacer-calendario .toolbar-background {
+  	background-size: 414px;
+  }
 }

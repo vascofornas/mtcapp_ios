@@ -1,6 +1,12 @@
 page-tipos-ubicaciones ion-content {
-	.no-padding ion-item {
-		padding-left: 0 !important;
+	.item-block h2 {
+		font-size: 1.4rem;
+	}
+	.no-padding, .no-padding ion-item {
+		padding-left: 0 !important; 
+	}
+	.tipo-ubicacion.item-block { height: 5.5rem; 
+		img { height: 5em !important; }
 	}
 }
 

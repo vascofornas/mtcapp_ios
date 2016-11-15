@@ -1,17 +1,25 @@
 page-actividades {
 
-	.list-md ion-item {
+	.item-block {
 		padding-left: 0;
+		position: relative;
 	}
-	.label-md {
+	.label-md, .label-ios, .label-wp {
 		margin-right: 0;
 	}
 }
 page-actividades ion-content {
 
-	.fecha { text-align: center; padding-left: 3px; margin: 0 3px 0 0 !important; width: 70px;
+	.fecha { text-align: center; padding-left: 3px !important;
+		margin: 0 3px 0 0 !important; width: 70px;
 		margin-top: 0px !important; padding: 9px 0;
 		position: relative; top: -17px; color: #fff; background-color: #000; }
+	.item-ios .fecha {
+		top: -20px;
+	}
+	.item-wp .fecha {
+		top: -22px;
+	}
 
 	.dia { font-weight: bold; color: #FF6347; font-size: 1.4em; line-height: 1em; }
 	.mes { font-size: 0.55em; text-transform: uppercase; }
@@ -26,7 +34,7 @@ page-actividades ion-content {
 		}
 	}
 
-	.label-md { margin-top: 0; padding-top: 0; }
+	.label-md, .label-ios, .label-wp { margin-top: 0; padding-top: 0; }
 
 	.actividad {
 		width: 120px;

@@ -5,7 +5,8 @@
   for more info on Angular 2 Components.
 -->
 
-<ion-item [ngClass]="{'is-even': isEven, 'no-image': !organizacion.imagen }">
+<ion-item [ngClass]="{'is-even': isEven, 'no-image': !organizacion.imagen,
+		'with-border': !organizacion.url_facebook && !organizacion.url_twitter && !organizacion.url_youtube && !organizacion.telefono && !organizacion.email }">
 	<ion-thumbnail item-left *ngIf="organizacion.imagen">
 	  <img class="a" src="{{ urlBase + organizacion.imagen }}">
 	</ion-thumbnail>
@@ -19,10 +20,10 @@
 		<span *ngIf="organizacion.url">{{ organizacion.url }}<br /></span>
 		<span class="ln-break" *ngIf="organizacion.descripcion">{{ organizacion.descripcion }}</span>
 	</p>
-	<a item-right *ngIf="modo != 'que-necesito' && organizacion.numero_hijos" href="javascript:;" (click)="cargarOrganizacion(organizacion.url_api)">
+	<a item-right *ngIf="modo != 'que-necesito' && organizacion.numero_hijos > 0" href="javascript:;" (click)="cargarOrganizacion(organizacion.url_api)">
 		<ion-icon name="arrow-forward"></ion-icon>
 	</a>
-	<a item-right *ngIf="modo == 'que-necesito'" href="javascript:;" (click)="openMap(organizacion.latitud, organizacion.longitud)">
+	<a class="size" item-right *ngIf="modo == 'que-necesito'" href="javascript:;" (click)="openMap(organizacion.latitud, organizacion.longitud)">
 		<i class="fa fa-map-marker"></i>
 	</a>
 </ion-item>
