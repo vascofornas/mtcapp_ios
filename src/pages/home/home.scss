@@ -57,8 +57,9 @@ page-home .app-container {
   top: 62%;
   left: 72%;
 }
-
-@media only screen and (min-device-height : 480px) {
+@media only screen
+and (max-device-height : 480px) 
+and (orientation : portrait) {
   page-home .app-container {
     width: 270px;
     height: 480px;
@@ -66,10 +67,22 @@ page-home .app-container {
   }
 }
 
-@media only screen and (min-device-height : 640px) {
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 413px)
+and (orientation : portrait) {
   page-home .app-container {
-    width: 360px;
-    height: 640px;
-    background-size: 360px 640px;
+    width: 375px;
+    height: 667px;
+    background-size: 375px 667px;
+  }
+}
+
+@media only screen 
+and (min-device-width : 414px) {
+  page-home .app-container {
+    width: 414px;
+    height: 736px;
+    background-size: 414px 736px;
   }
 }

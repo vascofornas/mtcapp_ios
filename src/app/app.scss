@@ -23,8 +23,8 @@ ion-spinner {
 .scroll-content {
   
 }
-.content-md {
-	background-color: #003837;
+.content-md, body, html {
+	background-color: #003837 !important;
 }
 
 .platform-core .ion-page {
