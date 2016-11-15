@@ -14,7 +14,7 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-body { overflow: auto; }
+body { overflow: auto; margin: 0; padding: 0; }
 ion-spinner {
   text-align: center;
   margin: 0 auto;
@@ -29,24 +29,23 @@ ion-spinner {
 }
 
 .platform-core .ion-page {
-	  
-	  /*
+	/*
 	width: 320px;
 	height: 480px;
 	*/
+  
 /*
   width: 320px;
   height: 568px;
-  */
-	/*
-	width: 414px;
-	height: 736px;
-	*/
-  
-  	
+ */
+	
 	width: 414px;
 	height: 736px;
 	
+  	/*
+	width: 414px;
+	height: 736px;
+	*/
 
   	/*
 	width: 360px;
@@ -129,3 +128,4 @@ ion-content {
 	.item-wp ion-thumbnail img  { padding-right: 12px; }
 }
 .back-button { color: #fff; }
+.clear { clear: both; height: 0; }
