@@ -58,10 +58,18 @@ page-home .app-container {
   left: 72%;
 }
 
-@media only screen and (max-device-height : 480px) {
+@media only screen and (min-device-height : 480px) {
   page-home .app-container {
     width: 270px;
     height: 480px;
     background-size: 270px 480px;
+  }
+}
+
+@media only screen and (min-device-height : 640px) {
+  page-home .app-container {
+    width: 360px;
+    height: 640px;
+    background-size: 360px 640px;
   }
 }
