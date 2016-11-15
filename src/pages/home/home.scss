@@ -12,48 +12,56 @@ page-home .app-container {
 .que-hacer-btn{
   background: url('../assets/img/1_1080x1920.png') center top no-repeat;
   background-size: 100%;
-  width: 84px;
-  height: 84px;
-  top: 39px;
-  right: 13px;
+  width: 27%;
+  height: 27%;
+  top: 6.9%;
+  right: 3.2%;
 }
 .donde-esta-btn {
   background: url('../assets/img/2_1080x1920.png') center top no-repeat;
   background-size: 100%;
-  width: 84px;
-  height: 84px;
-  top: 84px;
-  left: 125px;
+  width: 27%;
+  height: 27%;
+  top: 14.4%;
+  left: 38.2%;
 }
 .que-necesito-btn {
   background: url('../assets/img/3_1080x1920.png') center top no-repeat;
   background-size: 100%;
-  width: 84px;
-  height: 84px;
-  top: 157px;
-  left: 42px;
+  width: 27%;
+  height: 27%;
+  top: 27.4%;
+  left: 12.8%;
 }
 .consultanos-btn {
   background: url('../assets/img/4_1080x1920.png') center top no-repeat;
   background-size: 100%;
-  width: 84px;
-  height: 84px;
-  top: 258px;
-  left: 12px;
+  width: 27%;
+  height: 27%;
+  top: 45%;
+  left: 3%;
 }
 .vales-descuento-btn {
   background: url('../assets/img/5_1080x1920.png') center top no-repeat;
   background-size: 100%;
-  width: 84px;
-  height: 84px;
-  top: 366px;
-  left: 19px;
+  width: 27%;
+  height: 27%;
+  top: 64%;
+  left: 6%;
 }
 .zonas-wifi-btn {
   background: url('../assets/img/Boton_wifi.png') center top no-repeat;
   background-size: 58px auto;
-  width: 66px;
-  height: 80px;
-  top: 356px;
-  left: 235px;
+  width: 24%;
+  height: 26%;
+  top: 62%;
+  left: 72%;
+}
+
+@media only screen and (max-device-height : 480px) {
+  page-home .app-container {
+    width: 270px;
+    height: 480px;
+    background-size: 270px 480px;
+  }
 }

@@ -11,13 +11,15 @@
 <ion-content>
 	<div class="app-container">
 	  <div class="calendario-container">
-      <a href="javascript:;" (click)="retrocederMes()" class="pull-left">
-        <ion-icon name="arrow-back"></ion-icon>
-      </a>
-      <span class="mes-actual">{{mesActual}} {{anioActual}}</span>
-      <a href="javascript:;" (click)="avanzarMes()" class="pull-right">
-        <ion-icon name="arrow-forward"></ion-icon>
-      </a>
+      <div class="calendario-tools">
+        <a href="javascript:;" (click)="retrocederMes()" class="pull-left">
+          <ion-icon name="arrow-back"></ion-icon>
+        </a>
+        <span class="mes-actual">{{mesActual}} {{anioActual}}</span>
+        <a href="javascript:;" (click)="avanzarMes()" class="pull-right">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </a>
+      </div>
 	    <calendar [eventSource]="eventSource"
               [calendarMode]="calendar.mode"
               [currentDate]="calendar.currentDate"

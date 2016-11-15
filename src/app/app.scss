@@ -28,10 +28,15 @@ ion-spinner {
 }
 
 .platform-core .ion-page {
+	  
+	width: 320px;
+	height: 480px;
+
 	  /*
   width: 320px;
   height: 568px;
-  */
+  	*/
+  
 	/*
 	width: 414px;
 	height: 736px;
@@ -41,10 +46,10 @@ ion-spinner {
 	height: 736px;
   */
 
-  
+  	/*
 	width: 360px;
 	height: 640px;
-  
+  	*/
 }
 .app-container {
   position: relative;

@@ -16,6 +16,18 @@ page-que-hacer-calendario .content-md {
 		background-color: #0000FF;
 	}
 }
+page-que-hacer-calendario .app-container {
+	background-color: transparent;
+
+	.calendario-tools {
+		width: 270px;
+		margin: 0 auto 14px;
+		text-align: center;
+		a {
+			color: #000;
+		}
+	}
+}
 
 page-que-hacer-calendario .toolbar-background {
 	background: url('../assets/img/header-trans.png') center -16px no-repeat;
