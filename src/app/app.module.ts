@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { QueHacerPage } from '../pages/que-hacer/que-hacer';
 import { HomePage } from '../pages/home/home';
@@ -51,6 +51,6 @@ import { ActividadComponent } from '../components/actividad/actividad';
     OrganizacionComponent,
     ActividadComponent
   ],
-  providers: []
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
