@@ -1,0 +1,19 @@
+page-actividad {
+
+	.fecha {
+		text-align: center;
+		margin: 0 !important;
+		width: 70px;
+		color: #fff;
+		background-color: #000;
+		padding: 1rem 0;
+	}
+
+	.dia { font-weight: bold; color: #FF6347; font-size: 2rem; line-height: 1em; }
+	.mes { font-size: 0.55em; text-transform: uppercase; }
+	.hora-minutos { font-weight: bold; color: #FF6347; padding-top: 2px; display: inline-block; }
+
+	.label-md, .label-ios, .label-wp {
+		margin-right: 0;
+	}
+}

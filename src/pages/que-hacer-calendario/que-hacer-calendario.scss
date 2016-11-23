@@ -56,6 +56,13 @@ page-que-hacer-calendario ion-content .calendario-container calendar {
 		    border: 0 none !important;
 		    padding: 3px 0 !important; }
 	}
+	.list {
+		display: none;
+	}
+
+	.monthview-primary-with-event {
+		background-color: #3a87ad;
+	}
 	
 }
 

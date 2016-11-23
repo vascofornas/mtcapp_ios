@@ -20,7 +20,7 @@
           <ion-icon name="arrow-forward"></ion-icon>
         </a>
       </div>
-	    <calendar [eventSource]="eventSource"
+	    <calendar [eventSource]="eventSource" startingDayMonth="1" startingDayWeek="1"
               [calendarMode]="calendar.mode"
               [currentDate]="calendar.currentDate"
               (onCurrentDateChanged)="onCurrentDateChanged($event)"
@@ -29,6 +29,9 @@
           step="30">
       </calendar>
 	  </div>
+    <div *ngIf="loading">
+      <ion-spinner name="bubbles"></ion-spinner>
+    </div>
 	</div>
 </ion-content>
 <ion-footer><div></div></ion-footer>

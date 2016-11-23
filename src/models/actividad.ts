@@ -8,6 +8,7 @@ interface Actividad{
 	dia?;
 	mes?;
 	hora_minutos?;
+	descripcion?;
 }
 
 export default Actividad;

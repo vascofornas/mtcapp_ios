@@ -10,18 +10,18 @@ page-actividades {
 }
 page-actividades ion-content {
 
-	.fecha { text-align: center; padding-left: 3px !important;
-		margin: 0 3px 0 0 !important; width: 70px;
-		margin-top: 0px !important; padding: 9px 0;
-		position: relative; top: -17px; color: #fff; background-color: #000; }
-	.item-ios .fecha {
-		top: -20px;
-	}
-	.item-wp .fecha {
-		top: -22px;
+	.fecha {
+		text-align: center;
+		margin: 0 !important;
+		width: 70px;
+		color: #fff;
+		background-color: #000;
+		position: relative;
+		top: -1rem;
+		padding: 1rem 0;
 	}
 
-	.dia { font-weight: bold; color: #FF6347; font-size: 1.4em; line-height: 1em; }
+	.dia { font-weight: bold; color: #FF6347; font-size: 2rem; line-height: 1em; }
 	.mes { font-size: 0.55em; text-transform: uppercase; }
 	.hora-minutos { font-weight: bold; color: #FF6347; padding-top: 2px; display: inline-block; }
 
@@ -36,6 +36,22 @@ page-actividades ion-content {
 
 	.label-md, .label-ios, .label-wp { margin-top: 0; padding-top: 0; }
 
+	.app-container .item-block .item-inner {
+		padding-right: 0;
+	}
+
+	.item .item-inner ion-thumbnail {
+		margin-right: 0;
+		min-width: 24rem;
+
+		img {
+			max-width: 100% !important;
+			width: 100% !important;
+			height: auto !important;
+			padding-right: 0;
+		}
+	}
+
 	.actividad {
 		width: 120px;
 		font-size: 0.8em;
@@ -45,6 +61,4 @@ page-actividades ion-content {
 			margin-bottom: 0.4em; font-weight: bold; color: #FF6347
 		} 
 	}
-
-
 }

@@ -3,6 +3,8 @@ import { NavController,NavParams } from 'ionic-angular';
 
 import { ActividadesService } from '../../providers/actividades-service';
 
+import { ActividadPage } from '../actividad/actividad';
+
 import moment from 'moment';
 import { ENV } from '../../config/environment';
 
@@ -56,6 +58,10 @@ export class ActividadesPage {
       acts.push(act);
     }
     this.actividades = acts;
+  }
+
+  cargarDetalleActividad(id){
+    this.navCtrl.push(ActividadPage, {url: ENV.API_URL+'/api/que-hacer/detalle/'+id});
   }
 
 }

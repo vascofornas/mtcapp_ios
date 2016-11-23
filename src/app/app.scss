@@ -38,19 +38,19 @@ ion-spinner {
   width: 320px;
   height: 568px;
  */
-	
+  	/*	
 	width: 414px;
 	height: 736px;
-	
+	  	*/
   	/*
 	width: 414px;
 	height: 736px;
 	*/
 
-  	/*
+
 	width: 360px;
 	height: 640px;
-  	*/
+
 }
 .app-container {
   position: relative;
@@ -129,3 +129,13 @@ ion-content {
 }
 .back-button { color: #fff; }
 .clear { clear: both; height: 0; }
+
+.scroll-content {
+    overflow-y:auto;
+}
+::-webkit-scrollbar, *::-webkit-scrollbar {
+  display: none;
+}
+body .footer-md::before {
+	background-image: none;
+}

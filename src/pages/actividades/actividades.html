@@ -12,22 +12,25 @@
   <div class="app-container">
       <div *ngIf="actividades!==null">
         <ion-list>
-          <ion-item *ngFor="let actividad of actividades">
+          <ion-item *ngFor="let actividad of actividades" (click)="cargarDetalleActividad(actividad.id)">
             <div class="clear"></div>
             <div class="fecha" item-left>
               <span class="dia">{{ actividad.dia }}</span><br />
               <span class="mes">{{ actividad.mes }}</span><br />
               <span class="hora-minutos">{{ actividad.hora_minutos }}</span>
               </div>
-            <ion-thumbnail>
+            <ion-thumbnail item-right>
               <img src="{{ urlBase + actividad.imagen }}">
             </ion-thumbnail>
-            <div class="actividad" item-right>
-              <h2>{{ actividad.titulo }}</h2>
-              <span>{{ actividad.organizacion_nombre }}</span>
-            </div>
           </ion-item>
         </ion-list>
+        <div *ngIf="actividades.length == 0">
+          <ion-list>
+            <ion-item>
+              <p>No se encontraron actividades</p>
+            </ion-item>
+          </ion-list>
+        </div>
       </div>
       <div *ngIf="actividades===null">
         <ion-spinner name="bubbles"></ion-spinner>

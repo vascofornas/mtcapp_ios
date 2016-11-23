@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ActividadesPage } from '../actividades/actividades';
 import moment from 'moment';
+import { ENV } from '../../config/environment';
+
+import Actividad from '../../models/actividad';
+
+import { CalendarioProvider } from '../../providers/calendario-provider';
 
 /*
   Generated class for the QueHacerCalendario page.
@@ -11,9 +16,12 @@ import moment from 'moment';
 */
 @Component({
   selector: 'page-que-hacer-calendario',
-  templateUrl: 'que-hacer-calendario.html'
+  templateUrl: 'que-hacer-calendario.html',
+  providers: [CalendarioProvider]
 })
 export class QueHacerCalendarioPage {
+
+  public loading = false;
 
   public meses = [
     'Enero',
@@ -30,25 +38,67 @@ export class QueHacerCalendarioPage {
     'Diciembre'
   ];
 
+  mesNumero = 0;
   mesActual = '';
-  anioActual;
+  anioActual = 0;
 
-  public eventSource = [];
+  public eventSource = [
+    /* {
+      title: "Huh",
+      startTime: new Date(Date.UTC(2016, 10, 10)),
+      endTime: new Date(Date.UTC(2016, 10,11)),
+      allDay: true
+    } */
+  ];
   calendar = {
         mode: 'month',
         currentDate: new Date()
   };
   public isToday = true;
 
-  constructor(public navCtrl: NavController) {
-    this.mesActual = this.meses[this.calendar.currentDate.getMonth()];
-    this.anioActual = this.calendar.currentDate.getFullYear();
+  constructor(public navCtrl: NavController, public eventoService: CalendarioProvider) {
+    this.cambiarMes();
   }
 
-  /*
-  get seleccionarPeriodo(){
-    return this.periodoSeleccionado;
-  } */
+  cambiarMes(){
+    let mesNumero = this.calendar.currentDate.getMonth();
+    this.mesActual = this.meses[mesNumero];
+    let anioActual = this.calendar.currentDate.getFullYear();
+
+    if(mesNumero != this.mesNumero || anioActual != this.anioActual){
+      this.cargarMes(mesNumero, anioActual);
+    }
+    this.mesNumero = mesNumero;
+    this.anioActual = anioActual;
+  }
+
+  cargarMes(mes, anio){
+    this.loading = true;
+
+    let url = ENV.API_URL+'/api/que-hacer/mes/'+(mes+1)+'/'+anio;
+
+    this.eventoService.load(url).then( (data : Actividad[] )=> {
+      this.procesarEventos(data);
+      this.loading = false;
+    });
+
+  }
+
+  procesarEventos(data){
+    let eventos = [], endTime;
+    for(let i=0; i<data.length; i++){
+
+      endTime = data[i].fecha_fin ? moment(data[i].fecha_fin) : moment(data[i].fecha_inicio);
+
+      eventos.push({
+        title: data[i].titulo,
+        startTime: moment(data[i].fecha_inicio).toDate(),
+        endTime: endTime.toDate(),
+        allDay: false
+      });
+    }
+    this.eventSource = eventos;
+  }
 
   avanzarMes(){
     let m = moment(this.calendar.currentDate).add(1, 'months');
@@ -75,8 +125,8 @@ export class QueHacerCalendarioPage {
   }
 
   onCurrentDateChanged(event: Date) {
-    this.mesActual = this.meses[this.calendar.currentDate.getMonth()];
-    this.anioActual = this.calendar.currentDate.getFullYear();
+
+    this.cambiarMes();
 
   }
 

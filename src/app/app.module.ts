@@ -5,6 +5,7 @@ import { QueHacerPage } from '../pages/que-hacer/que-hacer';
 import { HomePage } from '../pages/home/home';
 import { QueHacerCategoriasPage } from '../pages/que-hacer-categorias/que-hacer-categorias';
 import { ActividadesPage } from '../pages/actividades/actividades';
+import { ActividadPage } from '../pages/actividad/actividad';
 import { QueHacerCalendarioPage } from '../pages/que-hacer-calendario/que-hacer-calendario';
 import { TiposUbicacionesPage } from '../pages/tipos-ubicaciones/tipos-ubicaciones';
 import { OrganizacionesPage } from '../pages/organizaciones/organizaciones';
@@ -26,6 +27,7 @@ import { ActividadComponent } from '../components/actividad/actividad';
     OrganizacionesPage,
     TiposOrganizacionesPage,
     ConsultanosPage,
+    ActividadPage,
     OrganizacionComponent,
     ActividadComponent
   ],
@@ -48,6 +50,7 @@ import { ActividadComponent } from '../components/actividad/actividad';
     OrganizacionesPage,
     TiposOrganizacionesPage,
     ConsultanosPage,
+    ActividadPage,
     OrganizacionComponent,
     ActividadComponent
   ],
