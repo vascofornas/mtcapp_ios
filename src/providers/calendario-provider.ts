@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class CalendarioProvider {
 
   constructor(public http: Http) {
-    console.log('Hello CalendarioProvider Provider');
+    //console.log('Hello CalendarioProvider Provider');
   }
 
   load(url) {
