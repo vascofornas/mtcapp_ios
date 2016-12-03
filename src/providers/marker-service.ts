@@ -4,15 +4,8 @@ import 'rxjs/add/operator/map';
 
 import { ENV } from '../config/environment';
 
-
-/*
-  Generated class for the DondeEstaProvider provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
-export class DondeEstaService {
+export class MarkerService {
 
   protected loadedOn : number;
 
@@ -21,13 +14,13 @@ export class DondeEstaService {
   protected path : string;
 
   constructor(public http: Http) {
-    this.path = ENV.API_URL + '/api/donde-esta';
+    this.path = ENV.API_URL + '/api/zonas-wifi';
   }
 
   load() {
     if (this.data) {
       // already loaded data
-      return Promise.resolve(this.data.zonas_wifi);
+      return Promise.resolve(this.data);
     }
 
     // don't have the data yet
@@ -41,10 +34,9 @@ export class DondeEstaService {
           // we've got back the raw data, now generate the core schedule data
           // and save the data for later reference
           this.data = data;
-          resolve(this.data.zonas_wifi);
+          resolve(this.data);
         });
     });
   }
-
 
 }

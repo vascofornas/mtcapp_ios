@@ -6,6 +6,9 @@ import { QueHacerPage } from '../que-hacer/que-hacer';
 import { TiposUbicacionesPage } from '../tipos-ubicaciones/tipos-ubicaciones';
 import { TiposOrganizacionesPage } from '../tipos-organizaciones/tipos-organizaciones';
 import { ConsultanosPage } from '../consultanos/consultanos';
+import { ZonasWifiPage } from '../zonas-wifi/zonas-wifi';
+
+import { ENLACES } from '../../config/enlaces';
 
 declare var window: any;
 declare var cordova: any;
@@ -45,11 +48,11 @@ export class HomePage {
   };
 
   valesDescuento = () => {
-    window.open("http://www.google.com");
+    window.open(ENLACES.VALES_DESCUENTO);
   };
 
   zonasWifi = () => {
-    window.open("http://www.yahoo.com");
+    this.navCtrl.push(ZonasWifiPage);
   };
 
 }
