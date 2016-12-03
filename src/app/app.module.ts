@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import { QueHacerCategoriasPage } from '../pages/que-hacer-categorias/que-hacer-categorias';
 import { ActividadesPage } from '../pages/actividades/actividades';
 import { ActividadPage } from '../pages/actividad/actividad';
+import { ZonasWifiPage } from '../pages/zonas-wifi/zonas-wifi';
 import { QueHacerCalendarioPage } from '../pages/que-hacer-calendario/que-hacer-calendario';
 import { TiposUbicacionesPage } from '../pages/tipos-ubicaciones/tipos-ubicaciones';
 import { OrganizacionesPage } from '../pages/organizaciones/organizaciones';
@@ -14,6 +15,8 @@ import { ConsultanosPage } from '../pages/consultanos/consultanos';
 import { NgCalendarModule  } from 'ionic2-calendar';
 import { OrganizacionComponent } from '../components/organizacion/organizacion';
 import { ActividadComponent } from '../components/actividad/actividad';
+
+import { ConnectivityService } from '../providers/connectivity-service';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { ActividadComponent } from '../components/actividad/actividad';
     TiposOrganizacionesPage,
     ConsultanosPage,
     ActividadPage,
+    ZonasWifiPage,
     OrganizacionComponent,
     ActividadComponent
   ],
@@ -51,9 +55,12 @@ import { ActividadComponent } from '../components/actividad/actividad';
     TiposOrganizacionesPage,
     ConsultanosPage,
     ActividadPage,
+    ZonasWifiPage,
     OrganizacionComponent,
     ActividadComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    ConnectivityService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
