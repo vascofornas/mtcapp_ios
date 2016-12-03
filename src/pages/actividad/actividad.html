@@ -16,25 +16,34 @@
 <ion-content>
   <div class="app-container">
       <div *ngIf="actividad!==null">
-		<img src="{{ urlBase + actividad.imagen }}">
+		
         <ion-list>
           <ion-item>
 	        <div class="fecha" item-left>
 		      <span class="dia">{{ actividad.dia }}</span><br />
-		      <span class="mes">{{ actividad.mes }}</span><br />
+		      <span class="mes">{{ actividad.mes }}<br />{{ actividad.anio }}</span><br />
 		      <span class="hora-minutos">{{ actividad.hora_minutos }}</span>
 	        </div>
-            <div item-right>
-				<h2>{{ actividad.titulo }}</h2>	
-            </div>
+          <img src="{{ urlBase + actividad.imagen }}">
           </ion-item>
         </ion-list>
-		<p>
-		{{ actividad.descripcion }}
-		</p>
+        <header>
+                <h2>{{ actividad.titulo }}</h2>
+                <div>{{ actividad.organizacion_nombre }}</div>
+        </header>
+    <div class="options">
+      <button ion-button color="dark" (click)="openMap(actividad.latitud,actividad.longitud)" *ngIf="actividad.latitud && actividad.longitud" round><i class="fa fa-map-marker"></i></button>
+      <button ion-button color="dark" (click)="openUrl(actividad.website)" *ngIf="actividad.website" round><i class="fa fa-external-link"></i></button>
+      <button ion-button color="dark" (click)="dialPhone(actividad.telefono)" *ngIf="actividad.telefono" round><i class="fa fa-phone"></i></button>
+      <button ion-button color="dark" (click)="writeMail(actividad.email)" *ngIf="actividad.email" round><i class="fa fa-envelope-o"></i></button>
+    </div>
+    <p>
+    {{ actividad.descripcion }}
+    </p>
       </div>
       <div *ngIf="actividad===null">
         <ion-spinner name="bubbles"></ion-spinner>
       </div>
   </div>
 </ion-content>
+<ion-footer><div></div></ion-footer>

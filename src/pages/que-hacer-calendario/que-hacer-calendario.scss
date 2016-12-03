@@ -66,16 +66,6 @@ page-que-hacer-calendario ion-content .calendario-container calendar {
 	
 }
 
-@media only screen
-and (max-device-height : 480px) 
-and (orientation : portrait) {
-  page-que-hacer-calendario ion-content {
-    background-size: 270px 480px;
-  }
-  page-que-hacer-calendario .toolbar-background {
-  	background-size: 270px;
-  }
-}
 
 @media only screen 
 and (min-device-width : 375px) 

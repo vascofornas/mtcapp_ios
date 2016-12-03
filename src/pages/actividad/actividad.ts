@@ -4,9 +4,13 @@ import { NavController,NavParams } from 'ionic-angular';
 import { ActividadService } from '../../providers/actividad-service';
 import Actividad from '../../models/actividad';
 
+import { LaunchNavigator, LaunchNavigatorOptions } from 'ionic-native';
+
 import moment from 'moment';
 
 import { ENV } from '../../config/environment';
+
+declare var window : any;
 
 /*
   Generated class for the Actividad page.
@@ -40,6 +44,7 @@ export class ActividadPage {
 
       data.dia = m.date();
       data.mes = m.format('MMMM');
+      data.anio = m.year();
       data.hora_minutos = m.hour()+':'+m.minutes();
 
       this.actividad = data;
@@ -48,6 +53,35 @@ export class ActividadPage {
 
   ionViewDidLoad() {
     //console.log('Hello ActividadPage Page');
+  }
+
+  openUrl(www){
+    window.open(www);
+  }
+
+  dialPhone(phone){
+    window.open('tel://'+phone);
+  }
+
+  writeMail(mail){
+    window.open('mailto://'+mail);
+  }
+
+  openMap(latitud, longitud){
+    
+    const destination = [latitud,longitud];
+
+    let options: LaunchNavigatorOptions = {
+      start: ''
+    };
+
+    LaunchNavigator.navigate(destination, options)
+        .then(
+            success => {},
+            error => {}
+    );
+    ///@-10.7464012,-77.2387528,11z
+    //window.open('https://maps.google.com/maps/@'+latitud.toString()+'+'+longitud.toString()+',12z');
   }
 
 }

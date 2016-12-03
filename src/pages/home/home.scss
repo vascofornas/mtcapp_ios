@@ -2,8 +2,8 @@ page-home {
   background-color: #003837;
 }
 page-home .app-container {
-  background: url('../assets/img/bg-home.png') center top no-repeat #003837;
-  background-size: 320px 568px; top: 0;
+  background: url('../assets/img/bg-home.png') center top no-repeat #003333;
+  background-size: 320px 518px; top: 0;
 }
 .home-btn{
   display: block;
@@ -14,7 +14,7 @@ page-home .app-container {
   background-size: 100%;
   width: 27%;
   height: 27%;
-  margin-top: 3.8rem;
+  margin-top: 3.4rem;
   margin-left: 69.9%;
 }
 .donde-esta-btn {
@@ -22,7 +22,7 @@ page-home .app-container {
   background-size: 100%;
   width: 27%;
   height: 27%;
-  margin-top: 8.4rem;
+  margin-top: 6.9rem;
   margin-left: 38.3%;
 }
 .que-necesito-btn {
@@ -30,7 +30,7 @@ page-home .app-container {
   background-size: 100%;
   width: 27%;
   height: 27%;
-  margin-top: 15.6rem;
+  margin-top: 14.1rem;
   margin-left: 12.8%;
 }
 .consultanos-btn {
@@ -38,7 +38,7 @@ page-home .app-container {
   background-size: 100%;
   width: 27%;
   height: 27%;
-  margin-top: 25.8rem;
+  margin-top: 23.3rem;
   margin-left: 3.1%;
 }
 .vales-descuento-btn {
@@ -46,7 +46,7 @@ page-home .app-container {
   background-size: 100%;
   width: 27%;
   height: 27%;
-  margin-top: 36.7rem;
+  margin-top: 33.4rem;
   margin-left: 5.9%;
 }
 .zonas-wifi-btn {
@@ -54,46 +54,89 @@ page-home .app-container {
   background-size: 65% auto;
   width: 24%;
   height: 26%;
-  margin-top: 35.5rem;
+  margin-top: 32.5rem;
   margin-left: 72%;
 }
 
 @media only screen
-and (max-device-height : 579px) 
+and (max-device-height : 480px )
 and (orientation : portrait) {
   page-home .app-container {
     width: 270px;
     background-size: 270px 480px;
   }
   .que-hacer-btn{
-    width: 27%;
-    height: 27%;
     margin-top: 3.2rem;
-    margin-left: 69.9%;
   }
   .donde-esta-btn {
-    width: 27%;
-    height: 27%;
     margin-top: 7.2rem;
   }
   .que-necesito-btn {
-    width: 27%;
-    height: 27%;
     margin-top: 13.2rem;
   }
   .consultanos-btn {
-    width: 27%;
-    height: 27%;
     margin-top: 21.8rem;
   }
   .vales-descuento-btn {
-    width: 27%;
-    height: 27%;
     margin-top: 31rem;
   }
   .zonas-wifi-btn {
-    width: 24%;
-    height: 26%;
     margin-top: 30.4rem;
   }
 }
+
+@media only screen
+and (min-device-height : 640px) 
+and (orientation : portrait) {
+  page-home .app-container {
+    width: 360px;
+    background-size: 360px 640px;
+  }
+  .que-hacer-btn{
+    margin-top: 4.2rem;
+  }
+  .donde-esta-btn {
+    margin-top: 9.3rem;
+  }
+  .que-necesito-btn {
+    margin-top: 17.5rem;
+  }
+  .consultanos-btn {
+    margin-top: 28.9rem;
+  }
+  .vales-descuento-btn {
+    margin-top: 41rem;
+  }
+  .zonas-wifi-btn {
+    margin-top: 40.4rem;
+  }
+}
+
+@media only screen
+and (min-device-height : 732px) 
+and (orientation : portrait) {
+
+  page-home .app-container {
+    width: 412px;
+    background-size: 412px 732px;
+  }
+  .que-hacer-btn{
+    margin-top: 4.9rem;
+  }
+  .donde-esta-btn {
+    margin-top: 10.6rem;
+  }
+  .que-necesito-btn {
+    margin-top: 20.5rem;
+  }
+  .consultanos-btn {
+    margin-top: 33rem;
+  }
+  .vales-descuento-btn {
+    margin-top: 47rem;
+  }
+  .zonas-wifi-btn {
+ 
+    margin-top: 46.2rem;
+  }
+}  

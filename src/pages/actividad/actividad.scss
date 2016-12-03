@@ -7,13 +7,52 @@ page-actividad {
 		color: #fff;
 		background-color: #000;
 		padding: 1rem 0;
+		align-self: flex-start;
 	}
 
 	.dia { font-weight: bold; color: #FF6347; font-size: 2rem; line-height: 1em; }
-	.mes { font-size: 0.55em; text-transform: uppercase; }
+	.mes { font-size: 0.55em;
+    text-transform: uppercase;
+    line-height: 1.8em;
+    display: inline-block; }
 	.hora-minutos { font-weight: bold; color: #FF6347; padding-top: 2px; display: inline-block; }
 
 	.label-md, .label-ios, .label-wp {
 		margin-right: 0;
 	}
+	.list{ border: 0 none; margin-top: 1rem;
+		.item-block { padding-left: 0; border: 0 none !important; background-color: transparent; .label { margin-top: 0; margin-bottom: 0; } }
+	}
+
+	p { background-color: #fff; white-space: pre-wrap; padding: 0 8px; border-radius: 4px; }
+	.button-round { padding: 0;
+    width: 32px;
+    height: 32px; }
+
+	header { text-align: center; margin-bottom: 1rem; }
 }
+
+	page-actividad .content {
+		background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
+  		background-size: 320px 568px;
+	}
+	.app-container {
+		background-color: transparent;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 413px)
+	and (orientation : portrait) {
+	  page-actividad .content {
+	    background-size: 375px 667px;
+	  }
+
+	}
+
+	@media only screen 
+	and (min-device-width : 414px) {
+	  page-actividad .content {
+	    background-size: 414px 736px;
+	  }
+	}

@@ -25,33 +25,9 @@ ion-spinner {
 }
 .content-md, body, html,
 .content-ios, .content-wp, ion-footer {
-	background-color: #003837 !important;
+	background-color: #003333 !important;
 }
 
-.platform-core .ion-page {
-	/*
-	width: 320px;
-	height: 480px;
-	*/
-  
-/*
-  width: 320px;
-  height: 568px;
- */
-  	/*	
-	width: 414px;
-	height: 736px;
-	  	*/
-  	/*
-	width: 414px;
-	height: 736px;
-	*/
-
-
-	width: 360px;
-	height: 640px;
-
-}
 .app-container {
   position: relative;
   margin: 0 auto;

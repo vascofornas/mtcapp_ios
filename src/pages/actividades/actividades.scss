@@ -61,4 +61,39 @@ page-actividades ion-content {
 			margin-bottom: 0.4em; font-weight: bold; color: #FF6347
 		} 
 	}
+
 }
+
+	page-actividades .content {
+		background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
+  		background-size: 320px 568px;
+	}
+	.app-container {
+		background-color: transparent;
+	}
+
+	@media only screen
+	and (max-device-height : 480px) 
+	and (orientation : portrait) {
+	  page-actividades .content {
+	    background-size: 270px 480px;
+	  }
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 413px)
+	and (orientation : portrait) {
+	  page-actividades .content {
+	    background-size: 375px 667px;
+	  }
+
+	}
+
+	@media only screen 
+	and (min-device-width : 414px) {
+	  page-actividades .content {
+	    background-size: 414px 736px;
+	  }
+	}
+

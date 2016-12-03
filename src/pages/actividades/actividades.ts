@@ -53,6 +53,7 @@ export class ActividadesPage {
       m = moment(act.fecha_inicio, "YYYY-MM-DD HH:mm:ss");
 
       act.dia = m.date();
+      act.anio = m.year();
       act.mes = m.format('MMMM');
       act.hora_minutos = m.hour()+':'+m.minutes();
       acts.push(act);

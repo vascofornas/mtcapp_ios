@@ -1,5 +1,7 @@
 page-quehacer ion-content {
 
+
+
 	.list-md ion-item,
 	.list-ios ion-item,
 	.list-wp ion-item {
@@ -18,8 +20,9 @@ page-quehacer ion-content {
 		max-width: 10rem !important;
 	}
 }
-page-quehacer .app-container {
-	background-color: #fff;
+page-quehacer ion-content {
+  background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
+  background-size: 320px 568px;
 
 	.link {
 		display: block;
@@ -30,5 +33,22 @@ page-quehacer .app-container {
 	    text-decoration: none;
 	    font-size: 15px;
 	}
+	.app-container { background-color: transparent; } 
 }
 
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 413px)
+and (orientation : portrait) {
+  page-quehacer ion-content {
+    background-size: 375px 667px;
+  }
+
+}
+
+@media only screen 
+and (min-device-width : 414px) {
+  page-quehacer ion-content {
+    background-size: 414px 736px;
+  }
+}

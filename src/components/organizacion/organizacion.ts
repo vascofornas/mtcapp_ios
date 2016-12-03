@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+import { LaunchNavigator, LaunchNavigatorOptions } from 'ionic-native';
+
 import Organizacion from '../../models/organizacion';
 
 import { OrganizacionesPage } from '../../pages/organizaciones/organizaciones';
@@ -35,7 +37,20 @@ export class OrganizacionComponent {
   }
 
   openMap(latitud, longitud){
-    window.open('href://maps.google.com/maps?z=12&amp;t=m&amp;q=loc:'+latitud.toString()+'+'+longitud.toString());
+
+    const destination = [latitud,longitud];
+
+    let options: LaunchNavigatorOptions = {
+      start: ''
+    };
+
+    LaunchNavigator.navigate(destination, options)
+        .then(
+            success => {},
+            error => {}
+    );
+
+    //window.open('https://maps.google.com/maps/@'+latitud.toString()+'+'+longitud.toString()+',12z');
   }
   
 }
