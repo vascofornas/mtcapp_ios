@@ -20,7 +20,7 @@ export class MarkerService {
   load() {
     if (this.data) {
       // already loaded data
-      return Promise.resolve(this.data);
+      return Promise.resolve(this.data.zonas_wifi);
     }
 
     // don't have the data yet
@@ -34,7 +34,7 @@ export class MarkerService {
           // we've got back the raw data, now generate the core schedule data
           // and save the data for later reference
           this.data = data;
-          resolve(this.data);
+          resolve(this.data.zonas_wifi);
         });
     });
   }

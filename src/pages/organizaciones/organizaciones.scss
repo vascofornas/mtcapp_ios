@@ -12,3 +12,23 @@ page-organizaciones {
 	display: block;
 	height: 1.5rem;
 }
+	page-organizaciones .content {
+		background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
+  		background-size: 320px 568px;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 413px)
+	and (orientation : portrait) {
+	  page-organizaciones .content {
+	    background-size: 375px 667px;
+	  }
+	}
+
+	@media only screen 
+	and (min-device-width : 414px) {
+	  page-organizaciones .content {
+	    background-size: 414px 736px;
+	  }
+	}

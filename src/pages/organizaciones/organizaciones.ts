@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { LaunchNavigator, LaunchNavigatorOptions } from 'ionic-native';
+
 import { OrganizacionService } from '../../providers/organizacion-service';
 
 import { ENV } from '../../config/environment';
@@ -32,10 +34,6 @@ export class OrganizacionesPage {
 
   ionViewDidLoad() {
 
-  }
-
-  openUrl(url){
-    window.open(url);
   }
 
   cargarOrganizaciones(url){

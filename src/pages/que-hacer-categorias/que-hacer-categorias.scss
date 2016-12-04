@@ -1,9 +1,6 @@
 page-que-hacer-categorias{
 
 }
-page-que-hacer-categorias .app-container {
-  background-color: #fff;
-}
 
 page-que-hacer-categorias ion-content {
   margin: 0 auto;
@@ -12,3 +9,25 @@ page-que-hacer-categorias ion-content {
 		padding-right: 0;
 	}
 }
+
+
+	page-que-hacer-categorias .content {
+		background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
+  		background-size: 320px 568px;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 413px)
+	and (orientation : portrait) {
+	  page-que-hacer-categorias .content {
+	    background-size: 375px 667px;
+	  }
+	}
+
+	@media only screen 
+	and (min-device-width : 414px) {
+	  page-que-hacer-categorias .content {
+	    background-size: 414px 736px;
+	  }
+	}

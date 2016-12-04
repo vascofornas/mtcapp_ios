@@ -5,7 +5,6 @@ page-consultanos  ion-content {
 	}
 
 	.app-container {
-  		background-color: #fff;
 	
 		h2 { font-weight: bold; font-size: 1.8rem; position: relative; top: -2rem;
 			small {  }
@@ -34,3 +33,24 @@ page-consultanos  ion-content {
 		a[item-right] { margin-right: 20px; }
 	}
 }
+
+	page-consultanos .content {
+		background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
+  		background-size: 320px 568px;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 413px)
+	and (orientation : portrait) {
+	  page-consultanos .content {
+	    background-size: 375px 667px;
+	  }
+	}
+
+	@media only screen 
+	and (min-device-width : 414px) {
+	  page-consultanos .content {
+	    background-size: 414px 736px;
+	  }
+	}

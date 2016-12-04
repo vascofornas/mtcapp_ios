@@ -10,8 +10,8 @@ declare var google;
 
 class Marker {
 	nombre: string;
-	latitud: number;
-	longitud: number;
+	latitud: string;
+	longitud: string;
 }
 
 @Component({
@@ -95,7 +95,7 @@ export class ZonasWifiPage {
     	for(let i=0; i<data.length; i++){
     		let m = data[i];
     		let marker = new google.maps.Marker({
-		    	position: {lat: m.latitud, lng: m.longitud},
+		    	position: {lat: parseFloat(m.latitud), lng: parseFloat(m.longitud)},
 		    	map: this.map,
 		    	title: m.nombre
 		  	});
@@ -112,8 +112,9 @@ export class ZonasWifiPage {
 
 	let mapOptions = {
 		center: latLng,
-		zoom: 15
-	}
+		zoom: 14,
+		fullscreenControl: false
+	};
 
 	let ref;
 	if(typeof this.mapElement === 'undefined'){

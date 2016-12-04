@@ -17,7 +17,7 @@
 	<p>
 		<span *ngIf="organizacion.direccion">{{ organizacion.direccion }}<br /></span>
 		<span *ngIf="organizacion.telefono">Tlf: {{ organizacion.telefono }}<br /></span>
-		<span *ngIf="organizacion.url">{{ organizacion.url }}<br /></span>
+		<span *ngIf="organizacion.url" (click)="openUrl(organizacion.url)">{{ organizacion.url }}<br /></span>
 		<span class="ln-break" *ngIf="organizacion.descripcion">{{ organizacion.descripcion }}</span>
 	</p>
 	<a item-right *ngIf="modo != 'que-necesito' && organizacion.numero_hijos > 0" href="javascript:;" (click)="cargarOrganizacion(organizacion.url_api)">
@@ -31,29 +31,31 @@
 	<ul>
 	<li>
 	  <a class="" *ngIf="organizacion.url_facebook != null" href="javascript:;"
-	  	(click)="window.open(organizacion.url_facebook)">
+	  	(click)="openUrl(organizacion.url_facebook)">
 	    <i class="fa fa-facebook"></i>
 	  </a>
 	</li>
 	<li>
 	  <a class="" *ngIf="organizacion.url_twitter != null" href="javascript:;"
-	  	(click)="window.open(organizacion.url_twitter)">
+	  	(click)="openUrl(organizacion.url_twitter)">
 	    <i class="fa fa-twitter"></i>
 	  </a>	
 	</li>
 	<li>  
 	  <a class="" *ngIf="organizacion.url_youtube != null" href="javascript:;"
-	  	(click)="window.open(organizacion.url_youtube)">
+	  	(click)="openUrl(organizacion.url_youtube)">
 	    <i class="fa fa-youtube"></i>
 	  </a>
 	</li>
 	<li>
-	  <a class="" *ngIf="organizacion.url_telefono != null" href="javascript:;">
+	  <a class="" *ngIf="organizacion.telefono != null" href="javascript:;"
+	  	 (click)="dialPhone(organizacion.telefono)">
 	    <i class="fa fa-phone"></i>
 	  </a>
 	</li>
 	<li>
-	  <a class="" *ngIf="organizacion.email != null" href="javascript:;">
+	  <a class="" *ngIf="organizacion.email != null" href="javascript:;"
+	  	 (click)="writeMail(organizacion.email)">
 	    <ion-icon name="mail"></ion-icon>
 	  </a>
 	</li>

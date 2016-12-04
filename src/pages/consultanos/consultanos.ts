@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-/*
-  Generated class for the Consultanos page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+import { LaunchNavigator, LaunchNavigatorOptions } from 'ionic-native';
+
+import { ENLACES } from '../../config/enlaces';
+
 @Component({
   selector: 'page-consultanos',
   templateUrl: 'consultanos.html'
@@ -18,5 +17,22 @@ export class ConsultanosPage {
   ionViewDidLoad() {
 
   }
+
+  writeMail(mail){
+    window.open('mailto://'+mail);
+  }
+
+  consultaSanitaria(){
+  	this.writeMail(ENLACES.CONSULTA_SANITARIA);
+  }
+
+  consultaJuridica(){
+  	this.writeMail(ENLACES.CONSULTA_JURIDICA);
+  }
+
+  consultaEducativa(){
+  	this.writeMail(ENLACES.CONSULTA_EDUCATIVA);
+  }
+
 
 }

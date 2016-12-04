@@ -27,7 +27,7 @@ export class DondeEstaService {
   load() {
     if (this.data) {
       // already loaded data
-      return Promise.resolve(this.data.zonas_wifi);
+      return Promise.resolve(this.data);
     }
 
     // don't have the data yet
@@ -41,7 +41,7 @@ export class DondeEstaService {
           // we've got back the raw data, now generate the core schedule data
           // and save the data for later reference
           this.data = data;
-          resolve(this.data.zonas_wifi);
+          resolve(this.data);
         });
     });
   }
