@@ -38,7 +38,7 @@ export class OrganizacionComponent {
 
 
   dialPhone(phone){
-    window.open('tel://'+phone);
+    window.open('tel://'+phone.replace(/ /g,''));
   }
 
   writeMail(mail){
