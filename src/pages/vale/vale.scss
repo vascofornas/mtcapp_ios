@@ -1,3 +1,55 @@
 page-vale {
 
+	.label-md, .label-ios, .label-wp {
+		margin-right: 0;
+	}
+	.list{ border: 0 none; margin-top: 1rem;
+		.item-block { padding-left: 0; border: 0 none !important;  .label { margin-top: 0; margin-bottom: 0; } }
+		/*
+		.item-block:nth-child(even) {
+		    background-color: #B4E8D3;
+		} */
+
+	}
+
+	.img { float: left; width: 46%; }
+	.pg-header {     white-space: pre-line;
+    font-size: 1.2rem; float: left;
+    width: 53%;
+    min-height: 10rem;
+    line-height: 1.2rem; strong, span { padding: 0 5px; display: inline-block; } }
+
+	p { background-color: #fff; white-space: pre-line; padding: 0 8px; border-radius: 4px; }
+	.options .button-round { padding: 0;
+    width: 32px;
+    height: 32px; }
+
+	header { text-align: center; margin-bottom: 1rem; }
+
+	.contenido, .options { clear: both; height: auto; padding: 0 12px; margin-bottom: 10px; }
+	.contenido { white-space: pre-line; }
 }
+
+	page-vale .content {
+		background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
+  		background-size: 320px 568px;
+	}
+	.app-container {
+		background-color: transparent;
+	}
+
+	@media only screen 
+	and (min-device-width : 375px) 
+	and (max-device-width : 413px)
+	and (orientation : portrait) {
+	  page-vale .content {
+	    background-size: 375px 667px;
+	  }
+	}
+
+	@media only screen 
+	and (min-device-width : 414px) {
+	  page-vale .content {
+	    background-size: 414px 736px;
+	  }
+	}

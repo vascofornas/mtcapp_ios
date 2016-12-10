@@ -7,8 +7,8 @@ import { TiposUbicacionesPage } from '../tipos-ubicaciones/tipos-ubicaciones';
 import { TiposOrganizacionesPage } from '../tipos-organizaciones/tipos-organizaciones';
 import { ConsultanosPage } from '../consultanos/consultanos';
 import { ZonasWifiPage } from '../zonas-wifi/zonas-wifi';
+import { ValePage } from '../vale/vale';
 
-import { ENLACES } from '../../config/enlaces';
 
 declare var window: any;
 declare var cordova: any;
@@ -48,7 +48,7 @@ export class HomePage {
   };
 
   valesDescuento = () => {
-    window.open(ENLACES.VALES_DESCUENTO);
+    this.navCtrl.push(ValePage);
   };
 
   zonasWifi = () => {

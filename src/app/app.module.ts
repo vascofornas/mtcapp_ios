@@ -15,6 +15,8 @@ import { ConsultanosPage } from '../pages/consultanos/consultanos';
 import { NgCalendarModule  } from 'ionic2-calendar';
 import { OrganizacionComponent } from '../components/organizacion/organizacion';
 import { ActividadComponent } from '../components/actividad/actividad';
+import { ValePage } from '../pages/vale/vale';
+import { InscripcionesPage } from '../pages/inscripciones/inscripciones';
 
 import { ConnectivityService } from '../providers/connectivity-service';
 
@@ -32,6 +34,8 @@ import { ConnectivityService } from '../providers/connectivity-service';
     ConsultanosPage,
     ActividadPage,
     ZonasWifiPage,
+    ValePage,
+    InscripcionesPage,
     OrganizacionComponent,
     ActividadComponent
   ],
@@ -56,6 +60,8 @@ import { ConnectivityService } from '../providers/connectivity-service';
     ConsultanosPage,
     ActividadPage,
     ZonasWifiPage,
+    ValePage,
+    InscripcionesPage,
     OrganizacionComponent,
     ActividadComponent
   ],

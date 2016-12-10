@@ -1,18 +1,32 @@
-<!--
-  Generated template for the Vale page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Vale</ion-title>
+    <ion-title></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div class="app-container">
+	<ion-list>
+		<ion-item *ngFor="let vale of vales">
+			<div class="img">
+				<img src="{{ baseUrl + vale.image }}" *ngIf="vale.image" />
+			</div>
+			<div class="pg-header">
+				<strong>{{ vale.titulo}}</strong><br />
+				<span *ngIf="vale.direccion">{{ vale.direccion}}<br /></span>
+				<span *ngIf="vale.telefono">{{ vale.telefono }}</span>
+			</div>
+			<div class="contenido">{{ vale.contenido }}</div>
+		    <div class="options">
+		      <button ion-button color="dark" (click)="writeMail(vale.email)" *ngIf="vale.email" round><i class="fa fa-envelope-o"></i></button>
+		    </div>
 
+		</ion-item>
+
+	</ion-list>
+  </div>
 </ion-content>
+<ion-footer><div></div></ion-footer>

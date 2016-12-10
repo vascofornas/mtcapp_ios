@@ -1,22 +1,48 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-/*
-  Generated class for the Vale page.
+import { Vale } from '../../models/vale';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+import { ValeService } from '../../providers/vale-service';
+
+import { ENV } from '../../config/environment';
+
 @Component({
   selector: 'page-vale',
-  templateUrl: 'vale.html'
+  templateUrl: 'vale.html',
+  providers: [ValeService]
 })
 export class ValePage {
 
-  constructor(public navCtrl: NavController) {}
+	vales : Array<Vale> = [];
+
+	baseUrl : string = ENV.API_URL;
+
+  constructor(public navCtrl: NavController, public service: ValeService) {
+  	this.cargarVales();
+  }
 
   ionViewDidLoad() {
-    console.log('Hello ValePage Page');
+
   }
+
+  cargarVales(){
+  	this.service.cargarVales().then(v => {
+  		this.vales = v;
+  	}).catch(e => console.log(e));
+  }
+
+  openUrl(www){
+    window.open(www);
+  }
+
+  dialPhone(phone){
+    window.open('tel://'+phone.replace(/ /g,''));
+  }
+
+  writeMail(mail){
+    window.open('mailto://'+mail);
+  }
+
 
 }
