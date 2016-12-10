@@ -12,7 +12,8 @@ page-que-hacer-calendario ion-content {
 		display: block; float: right;
 	}
 	.monthview-selected {
-		background-color: #0000FF;
+		background-color: inherit !important;
+		color: inherit !important;
 	}
 }
 page-que-hacer-calendario .app-container {
@@ -61,7 +62,8 @@ page-que-hacer-calendario ion-content .calendario-container calendar {
 	}
 
 	.monthview-primary-with-event {
-		background-color: #3a87ad;
+		background-color: #3a87ad !important;
+		color: #fff !important;
 	}
 	
 }

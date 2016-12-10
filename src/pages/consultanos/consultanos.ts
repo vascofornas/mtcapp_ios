@@ -1,21 +1,31 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+/* import { LaunchNavigator, LaunchNavigatorOptions } from 'ionic-native'; */
 
-import { LaunchNavigator, LaunchNavigatorOptions } from 'ionic-native';
-
-import { ENLACES } from '../../config/enlaces';
+import { EmailService } from '../../providers/email-service';
 
 @Component({
   selector: 'page-consultanos',
-  templateUrl: 'consultanos.html'
+  templateUrl: 'consultanos.html',
+  providers: [EmailService]
 })
 export class ConsultanosPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public emailService: EmailService) {
+    this.cargarEmails();
+  }
+
+  emails = null;
 
   ionViewDidLoad() {
 
+  }
+
+  cargarEmails(){
+    this.emailService.cargarEmails()
+      .then( (data: any) => { this.emails = data; } )
+      .catch(e => { console.log(e) })
   }
 
   writeMail(mail){
@@ -23,15 +33,23 @@ export class ConsultanosPage {
   }
 
   consultaSanitaria(){
-  	this.writeMail(ENLACES.CONSULTA_SANITARIA);
+    if(this.emails==null) return;
+  	this.writeMail(this.emails.consulta_sanitaria);
   }
 
   consultaJuridica(){
-  	this.writeMail(ENLACES.CONSULTA_JURIDICA);
+    if(this.emails==null) return;
+  	this.writeMail(this.emails.consulta_juridica);
   }
 
   consultaEducativa(){
-  	this.writeMail(ENLACES.CONSULTA_EDUCATIVA);
+    if(this.emails==null) return;
+  	this.writeMail(this.emails.consulta_educativa);
+  }
+
+  consultaMovilidad(){
+    if(this.emails==null) return;
+    this.writeMail(this.emails.consulta_movilidad);
   }
 
 

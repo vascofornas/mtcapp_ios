@@ -34,6 +34,10 @@ page-actividades ion-content {
 		}
 	}
 
+	.item, ion-list ion-item {
+		background-color: #000; border-bottom: 1px solid #000;
+	}
+
 	.label-md, .label-ios, .label-wp { margin-top: 0; padding-top: 0; }
 
 	.app-container .item-block .item-inner {
@@ -72,28 +76,21 @@ page-actividades ion-content {
 		background-color: transparent;
 	}
 
-	@media only screen
-	and (max-device-height : 480px) 
-	and (orientation : portrait) {
-	  page-actividades .content {
-	    background-size: 270px 480px;
-	  }
-	}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 413px)
+and (orientation : portrait) {
+  page-actividades ion-content {
+    background-size: 375px 667px;
+  }
 
-	@media only screen 
-	and (min-device-width : 375px) 
-	and (max-device-width : 413px)
-	and (orientation : portrait) {
-	  page-actividades .content {
-	    background-size: 375px 667px;
-	  }
+}
 
-	}
+@media only screen 
+and (min-device-width : 414px) {
+  page-actividades ion-content {
+	
+    background-size: 414px 736px;
+  }
 
-	@media only screen 
-	and (min-device-width : 414px) {
-	  page-actividades .content {
-	    background-size: 414px 736px;
-	  }
-	}
-
+}

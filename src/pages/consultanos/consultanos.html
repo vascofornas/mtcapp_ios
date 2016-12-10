@@ -14,7 +14,10 @@
 
 <ion-content>
   <div class="app-container">
-  <ion-list>
+  <div *ngIf="emails===null">
+    <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+  <ion-list *ngIf="emails !== null">
     <ion-item>
       <ion-thumbnail item-left>
         <img src="assets/img/consultanos/cross.png">
@@ -48,6 +51,17 @@
 		<ion-icon name="mail"></ion-icon>
 	  </a>
     </ion-item>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/img/consultanos/movi.png">
+      </ion-thumbnail>
+      <div class="">
+        <h2><small>Consulta</small><br />Movilidad</h2>
+      </div>
+    <a item-right (click)="consultaMovilidad()">
+    <ion-icon name="mail"></ion-icon>
+    </a>
+    </ion-item>    
   </ion-list>
   </div>
 </ion-content>
