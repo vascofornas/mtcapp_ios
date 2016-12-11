@@ -17,6 +17,8 @@ import { OrganizacionComponent } from '../components/organizacion/organizacion';
 import { ActividadComponent } from '../components/actividad/actividad';
 import { ValePage } from '../pages/vale/vale';
 import { InscripcionesPage } from '../pages/inscripciones/inscripciones';
+import { SuscripcionesAltaPage } from '../pages/suscripciones-alta/suscripciones-alta';
+import { SuscripcionesBajaPage } from '../pages/suscripciones-baja/suscripciones-baja';
 
 import { ConnectivityService } from '../providers/connectivity-service';
 
@@ -36,6 +38,8 @@ import { ConnectivityService } from '../providers/connectivity-service';
     ZonasWifiPage,
     ValePage,
     InscripcionesPage,
+    SuscripcionesAltaPage,
+    SuscripcionesBajaPage,
     OrganizacionComponent,
     ActividadComponent
   ],
@@ -62,6 +66,8 @@ import { ConnectivityService } from '../providers/connectivity-service';
     ZonasWifiPage,
     ValePage,
     InscripcionesPage,
+    SuscripcionesAltaPage,
+    SuscripcionesBajaPage,
     OrganizacionComponent,
     ActividadComponent
   ],

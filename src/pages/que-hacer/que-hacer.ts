@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 
 import { QueHacerCategoriasPage } from '../que-hacer-categorias/que-hacer-categorias';
 import { QueHacerCalendarioPage } from '../que-hacer-calendario/que-hacer-calendario';
+import { InscripcionesPage } from '../inscripciones/inscripciones';
 
 @Component({
   selector: 'page-quehacer',
@@ -23,5 +24,9 @@ export class QueHacerPage {
 
   mostrarCategorias(){
     this.navCtrl.push(QueHacerCategoriasPage);
+  }
+
+  mostrarInscripciones(){
+    this.navCtrl.push(InscripcionesPage);
   }
 }

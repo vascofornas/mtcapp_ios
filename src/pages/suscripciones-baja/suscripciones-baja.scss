@@ -1,7 +1,7 @@
-page-inscripciones {
+page-suscripciones-baja {
 
 }
-page-inscripciones ion-content {
+page-suscripciones-baja ion-content {
   background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
   background-size: 320px 568px;
 
@@ -12,7 +12,7 @@ page-inscripciones ion-content {
 and (min-device-width : 375px) 
 and (max-device-width : 413px)
 and (orientation : portrait) {
-  page-inscripciones ion-content {
+  page-suscripciones-baja ion-content {
     background-size: 375px 667px;
   }
 
@@ -20,7 +20,7 @@ and (orientation : portrait) {
 
 @media only screen 
 and (min-device-width : 414px) {
-  page-inscripciones ion-content {
+  page-suscripciones-baja ion-content {
     background-size: 414px 736px;
   }
 }

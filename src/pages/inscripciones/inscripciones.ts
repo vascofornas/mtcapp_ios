@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { SuscripcionesAltaPage } from '../suscripciones-alta/suscripciones-alta';
+import { SuscripcionesBajaPage } from '../suscripciones-baja/suscripciones-baja';
+
 /*
   Generated class for the Inscripciones page.
 
@@ -16,7 +19,15 @@ export class InscripcionesPage {
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    console.log('Hello InscripcionesPage Page');
+    //console.log('Hello InscripcionesPage Page');
+  }
+
+  alta(){
+  	this.navCtrl.push(SuscripcionesAltaPage);
+  }
+
+  baja(){
+  	this.navCtrl.push(SuscripcionesBajaPage);
   }
 
 }
