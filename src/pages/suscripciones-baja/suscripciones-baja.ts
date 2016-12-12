@@ -1,22 +1,26 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-/*
-  Generated class for the SuscripcionesBaja page.
+import { SuscripcionesService } from '../../providers/suscripciones-service';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-suscripciones-baja',
-  templateUrl: 'suscripciones-baja.html'
+  templateUrl: 'suscripciones-baja.html',
+  providers: [SuscripcionesService]
 })
 export class SuscripcionesBajaPage {
+
+  email : string;
+  movil: string;
 
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    console.log('Hello SuscripcionesBajaPage Page');
+
+  }
+
+  solicitarBaja(){
+
   }
 
 }

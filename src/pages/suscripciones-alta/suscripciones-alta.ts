@@ -1,22 +1,26 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-/*
-  Generated class for the SuscripcionesAlta page.
+import { SuscripcionesService } from '../../providers/suscripciones-service';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-suscripciones-alta',
-  templateUrl: 'suscripciones-alta.html'
+  templateUrl: 'suscripciones-alta.html',
+  providers: [SuscripcionesService]
 })
 export class SuscripcionesAltaPage {
+
+  email : string;
+  movil: string;
 
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    console.log('Hello SuscripcionesAltaPage Page');
+
+  }
+
+  solicitarAlta(){
+  	
   }
 
 }

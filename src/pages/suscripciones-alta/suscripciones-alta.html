@@ -7,12 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>SuscripcionesAlta</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+	<div class="app-container">
+		<h2>Si, quiero recibir la información de la Casa de la Juventud</h2>
+		<div class="options">
+			<small class="desc">Indica el modo de recepción:</small><br />
+			<span class="desc">Por email a la siguiente dirección de correo electrónico</span><br />
+			<ion-input placeholder="e-mail" [(ngModel)]="email"></ion-input>
+			<span class="desc">O por SMS a mi número de móvil</span><br />
+			<ion-input placeholder="SMS" [(ngModel)]="movil"></ion-input><br />
+			<a href="#" (click)="solicitarAlta()">ENVIAR</a>
+		</div>
+	</div>
 </ion-content>

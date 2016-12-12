@@ -124,3 +124,6 @@ and (min-device-height : 568px) {
 	    height: 64px;
 	}
 }
+
+ion-toast.warning .toast-message { background-color: red; font-family: 'Roboto-Bold' }
+ion-toast.success .toast-message { background-color: green; font-family: 'Roboto-Bold' }

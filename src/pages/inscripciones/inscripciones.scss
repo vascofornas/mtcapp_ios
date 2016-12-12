@@ -5,7 +5,20 @@ page-inscripciones ion-content {
   background: url('../assets/img/fondo_calendario.png') center -27px no-repeat #003333;
   background-size: 320px 568px;
 
+	text-align: center;
 	.app-container { background-color: transparent; } 
+
+	h2 { color: green;
+    font-size: 2.4rem;
+    width: 90%;
+    margin: 4rem auto 0;
+    line-height: 3.4rem; }
+
+	a { margin-top: 2.4rem; display: inline-block;
+    font-size: 2.4rem;
+    margin-bottom: 0.2rem;
+    text-decoration: none; }
+	span {  }
 }
 
 @media only screen 

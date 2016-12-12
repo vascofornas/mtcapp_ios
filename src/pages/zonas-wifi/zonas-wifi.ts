@@ -105,26 +105,29 @@ export class ZonasWifiPage {
   }
  
   initMap(){
- 
-    this.mapInitialised = true;
- 
-	let latLng = new google.maps.LatLng(this.latitude, this.longitude);
 
-	let mapOptions = {
-		center: latLng,
-		zoom: 14,
-		fullscreenControl: false
-	};
+  	setTimeout(()=>{
+	 
+	    this.mapInitialised = true;
+	 
+		let latLng = new google.maps.LatLng(this.latitude, this.longitude);
 
-	let ref;
-	if(typeof this.mapElement === 'undefined'){
-		ref = document.getElementById(this.mapId);
-	} else {
-		ref = this.mapElement.nativeElement;
-	}
+		let mapOptions = {
+			center: latLng,
+			zoom: 17,
+			fullscreenControl: false
+		};
 
-	this.map = new google.maps.Map(ref, mapOptions);
-	this.loadMarkers();
+		let ref;
+		if(typeof this.mapElement === 'undefined'){
+			ref = document.getElementById(this.mapId);
+		} else {
+			ref = this.mapElement.nativeElement;
+		}
+
+		this.map = new google.maps.Map(ref, mapOptions);
+		this.loadMarkers();
+  	}, 500);
  
   }
  
