@@ -81,4 +81,5 @@
   <icon src="resources/ios/icon/icon-small@3x.png"/>
   <allow-navigation href="http://172.20.10.3:8100"/>
   <allow-navigation href="http://192.168.8.100:8100"/>
+  <allow-navigation href="http://192.168.8.100:8101"/>
 </widget>

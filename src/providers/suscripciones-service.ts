@@ -8,16 +8,16 @@ import { ENV } from '../config/environment';
 export class SuscripcionesService {
 
   constructor(public http: Http) {
-    console.log('Hello SuscripcionesService Provider');
+
   }
 
   solicitarAlta(email, movil) : Promise<boolean>{
   	return new Promise(resolve => {
 
-      var path = ENV.API_URL+'/api/suscripciones/alta';
+      var path = ENV.API_URL+'/api/suscribirse/alta';
       //console.log(path);
 
-      this.http.post(path, JSON.stringify({email,movil}))
+      this.http.post(path, {email,movil})
         .map(res => res.json())
         .subscribe( (data : any) => {
           resolve(true);
@@ -28,10 +28,10 @@ export class SuscripcionesService {
   solicitarBaja(email, movil) : Promise<boolean>{
   	return new Promise(resolve => {
 
-      var path = ENV.API_URL+'/api/suscripciones/baja';
+      var path = ENV.API_URL+'/api/suscribirse/baja';
       //console.log(path);
 
-      this.http.post(path, JSON.stringify({email,movil}))
+      this.http.post(path, {email,movil})
         .map(res => res.json())
         .subscribe( (data : any) => {
           resolve(true);

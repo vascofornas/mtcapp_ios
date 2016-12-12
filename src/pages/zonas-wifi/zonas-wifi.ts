@@ -45,11 +45,11 @@ export class ZonasWifiPage {
  
 	if(typeof google == "undefined" || typeof google.maps == "undefined"){
 	 
-	    console.log("Google maps JavaScript needs to be loaded.");
+	    //console.log("Google maps JavaScript needs to be loaded.");
 	    this.disableMap();
 	 
 	    if(this.connectivityService.isOnline()){
-	      console.log("online, loading map");
+	      //console.log("online, loading map");
 	 
 	      //Load the SDK
 	      window['mapInit'] = () => {
@@ -72,12 +72,12 @@ export class ZonasWifiPage {
 	} else {
 	 
 	    if(this.connectivityService.isOnline()){
-	      console.log("showing map");
+	      //console.log("showing map");
 	      this.initMap();
 	      this.enableMap();
 	    }
 	    else {
-	      console.log("disabling map");
+	      //console.log("disabling map");
 	      this.disableMap();
 	    }
 	 
@@ -86,11 +86,10 @@ export class ZonasWifiPage {
   }
 
   loadMarkers(){
-  	console.log("Huh");
 
     this.markerService.load().then( (data : Marker[] )=> {
 
-    	console.log(data);
+    	//console.log(data);
 
     	for(let i=0; i<data.length; i++){
     		let m = data[i];
@@ -99,7 +98,6 @@ export class ZonasWifiPage {
 		    	map: this.map,
 		    	title: m.nombre
 		  	});
-		  	console.log('Agregando marker', marker);
     	}
     });
   }
@@ -114,7 +112,7 @@ export class ZonasWifiPage {
 
 		let mapOptions = {
 			center: latLng,
-			zoom: 17,
+			zoom: 14,
 			fullscreenControl: false
 		};
 
@@ -132,11 +130,11 @@ export class ZonasWifiPage {
   }
  
   disableMap(){
-    console.log("disable map");
+    //console.log("disable map");
   }
  
   enableMap(){
-    console.log("enable map");
+    //console.log("enable map");
   }
  
   addConnectivityListeners(){
