@@ -29,6 +29,10 @@ export class HomePage {
 
       }
     });
+    platform.registerBackButtonAction( () => {
+      navCtrl.pop();
+    }, 100);
+
   }
 
   queHacer = () => {

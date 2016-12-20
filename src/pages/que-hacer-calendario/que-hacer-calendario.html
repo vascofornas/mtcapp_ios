@@ -20,7 +20,7 @@
           <ion-icon name="arrow-forward"></ion-icon>
         </a>
       </div>
-	    <calendar [eventSource]="eventSource" startingDayMonth="1" startingDayWeek="1"
+	    <calendar [eventSource]="eventSource" [startingDayMonth]="1" [startingDayWeek]="1"
               [calendarMode]="calendar.mode"
               [currentDate]="calendar.currentDate"
               (onCurrentDateChanged)="onCurrentDateChanged($event)"
