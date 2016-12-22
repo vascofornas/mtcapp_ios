@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform; Navigator } from 'ionic-angular';
 
 import { QueHacerPage } from '../que-hacer/que-hacer';
 import { TiposUbicacionesPage } from '../tipos-ubicaciones/tipos-ubicaciones';
@@ -30,7 +30,11 @@ export class HomePage {
       }
     });
     platform.registerBackButtonAction( () => {
-      navCtrl.pop();
+      if (this.navCtrl.canGoBack()) {
+        this.navCtrl.pop();
+      } else {
+        this.platform.exitApp();
+      }
     }, 100);
 
   }

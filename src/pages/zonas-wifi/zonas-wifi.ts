@@ -106,7 +106,7 @@ export class ZonasWifiPage {
 
   	setTimeout(()=>{
 	 
-	    this.mapInitialised = true;
+	    
 	 
 		let latLng = new google.maps.LatLng(this.latitude, this.longitude);
 
@@ -124,6 +124,9 @@ export class ZonasWifiPage {
 		}
 
 		this.map = new google.maps.Map(ref, mapOptions);
+
+		this.mapInitialised = true;
+		
 		this.loadMarkers();
   	}, 500);
  

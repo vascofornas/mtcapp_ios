@@ -11,5 +11,8 @@
 
 </ion-header>
 <ion-content>
+      <div *ngIf="!mapInitialised">
+        <ion-spinner name="bubbles"></ion-spinner>
+      </div>
 	<div #map id="{{ mapId }}" class="map"></div> 
 </ion-content>
